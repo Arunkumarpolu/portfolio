@@ -138,7 +138,7 @@ const typingElement=document.getElementById("typing-text");
 const words=[
 "Technical SEO Specialist",
 "Local SEO Expert",
-"SEO Executive",
+"SEO Specialist",
 "Digital Marketing Professional",
 "Website Optimization Expert",
 "Search Engine Optimization Specialist",
