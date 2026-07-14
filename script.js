@@ -347,51 +347,57 @@ if(reduceMotion.matches){
 document.documentElement.style.scrollBehavior="auto";
 }
 /*==================================================
-CONTACT FORM VALIDATION + SUBMISSION
+CONTACT FORM SUBMISSION
 ==================================================*/
 const contactForm = document.querySelector("#contactForm");
 if(contactForm){
-contactForm.addEventListener("submit",(e)=>{
-e.preventDefault();
-const name=document.querySelector("#name");
-const email=document.querySelector("#email");
-const message=document.querySelector("#message");
-if(
-name.value.trim()==="" ||
-email.value.trim()==="" ||
-message.value.trim()===""
-){
-showToast("Please fill all fields.","error");
-return;
-}
-const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if(!emailRegex.test(email.value)){
-showToast("Please enter a valid email.","error");
-return;
-}
-const submitBtn=contactForm.querySelector("button[type='submit']");
-const originalBtnText=submitBtn.textContent;
-submitBtn.disabled=true;
-submitBtn.textContent="Sending...";
-fetch(contactForm.action,{
-method:"POST",
-body:new FormData(contactForm),
-headers:{"Accept":"application/json"}
-})
-.then((response)=>{
-if(response.ok){
-showToast("Message sent successfully!","success");
-contactForm.reset();
-}else{
-throw new Error("Submission failed");
-}
-})
-.catch(()=>{
-showToast("Something went wrong. Please email me directly.","error");
-})
-.finally(()=>{
-submitBtn.disabled=false;
-submitBtn.textContent=originalBtnText;
-});
-});
+  contactForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const name = document.querySelector("#name");
+    const email = document.querySelector("#email");
+    const message = document.querySelector("#message");
+    
+    // Validation
+    if(
+      name.value.trim() === "" ||
+      email.value.trim() === "" ||
+      message.value.trim() === ""
+    ){
+      showToast("Please fill all fields.","error");
+      return;
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email.value)){
+      showToast("Please enter a valid email.","error");
+      return;
+    }
+    
+    // Submit
+    const submitBtn = contactForm.querySelector("button[type='submit']");
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    
+    fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: {"Accept": "application/json"}
+    })
+    .then((response) => {
+      if(response.ok){
+        showToast("Message sent successfully!","success");
+        contactForm.reset();
+      } else {
+        throw new Error("Submission failed");
+      }
+    })
+    .catch(() => {
+      showToast("Something went wrong. Please try again or email me directly.","error");
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
+  });
 }
