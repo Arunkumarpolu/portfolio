@@ -620,12 +620,30 @@
                         <a href="mailto:poluarunkumar627@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="contact-form glass">
-                    <form id="contactForm">
-                        <div class="input-group"><input type="text" id="name" placeholder="Your Name" required></div>
-                        <div class="input-group"><input type="email" id="email" placeholder="Your Email" required></div>
-                        <div class="input-group"><input type="text" id="subject" placeholder="Subject"></div>
-                        <div class="input-group"><textarea id="message" rows="6" placeholder="Your Message" required></textarea></div>
+                 <div class="contact-form glass">
+                    <!--
+                        FIX: form now POSTs to FormSubmit (https://formsubmit.co),
+                        a free service that forwards submissions straight to your
+                        inbox with zero backend code required.
+
+                        IMPORTANT ONE-TIME STEP:
+                        The very first time someone submits this form, FormSubmit
+                        will send poluarunkumar627@gmail.com a confirmation email —
+                        click "Activate Form" in that email once, and every
+                        submission after that will land in the inbox automatically.
+                    -->
+                    <form id="contactForm" action="https://formsubmit.co/ajax/poluarunkumar627@gmail.com" method="POST">
+                        <!-- Plain auto-response subject line -->
+                        <input type="hidden" name="_subject" value="New portfolio contact form message">
+                        <!-- Disables FormSubmit's captcha page for a smoother UX -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Honeypot field to cut down on spam bots -->
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="input-group"><input type="text" id="name" name="name" placeholder="Your Name" required></div>
+                        <div class="input-group"><input type="email" id="email" name="email" placeholder="Your Email" required></div>
+                        <div class="input-group"><input type="text" id="subject" name="subject" placeholder="Subject"></div>
+                        <div class="input-group"><textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea></div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
