@@ -215,7 +215,7 @@
                 </div>
                 <div class="about-content">
                     <h3>SEO & Digital Marketing Professional</h3>
-                    <p>I am an SEO Specialist with hands-on experience in Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Keyword Research, Google Business Profile Optimization, and Performance Reporting.</p>
+                    <p>I am an SEO Specialist with hands-on experience in Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Keyword Research, Google Business Profile Optimization, and Performance R[...]
                     <p>My goal is to help businesses achieve sustainable organic growth through modern SEO techniques, website optimization, and continuous performance improvements.</p>
 
                     <div class="about-info">
@@ -478,26 +478,7 @@
                 <p>A collection of SEO projects focused on improving website visibility, search rankings, technical performance, and local search presence.</p>
             </div>
 
-            <div class="services-grid"> <!-- Reusing services-grid layout for consistency if project-card specific grid isn't defined differently -->
-                 <!-- Note: CSS has .project-card styles but didn't define a specific grid container for it, assuming it fits in standard grids or needs one. 
-                      Based on CSS provided, there is no specific #projects grid definition, so I will use a generic grid or the service grid structure if classes allow. 
-                      Looking at CSS: .service-card is defined. .project-card is NOT defined in the provided CSS snippet. 
-                      I will assume .project-card should look like .service-card or .education-card. 
-                      To be safe, I will use the class 'service-card' for layout consistency or add a simple grid style inline if needed, 
-                      but strictly following instructions to only modify HTML, I will map these to existing styled classes if possible, 
-                      OR assume the user missed pasting the project CSS. 
-                      
-                      Actually, looking closely at the provided CSS, there is NO .project-card CSS. 
-                      However, there IS .education-card and .service-card. 
-                      I will use .service-card class for these items to ensure they look good, or simply leave them as project-card 
-                      and hope the user adds the CSS later. Given the instruction "Modify... according to Script.js/CSS", 
-                      and the CSS is missing project styles, I will swap them to 'service-card' temporarily for visual integrity 
-                      OR keep them as project-card and add a style block? No, only HTML. 
-                      
-                      Let's look at the CSS again. 
-                      Ah, I see `.service-card` is well defined. 
-                      I will use `service-card` for the project containers to ensure they render correctly with the Glass effect.
-                 -->
+            <div class="services-grid">
                 
                 <div class="service-card glass">
                     <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
@@ -522,17 +503,17 @@
                     <div class="experience-tags mt-2">
                         <span>On-Page</span><span>CRO</span>
                     </div>
-                 </div>
-                    <div class="service-card glass"><div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
-                    <h3>Programmatic SEO</h3>
-                    <p>Developed and optimized thousands of scalable SEO landing pages using programmatic SEO strategies. Created dynamic templates for procedures, specialties, diseases, doctors, and location pages with automated metadata, schema markup, internal linking, and keyword optimization to improve organic visibility and search performance.</p>
-                  <div class="experience-tags mt-2">
-                   <span>Programmatic SEO</span>
-                   <span>Dynamic Pages</span>
-                   <span>Schema</span>
-                   <span>Automation</span>
-                   </div>
                 </div>
+                <div class="service-card glass">
+                    <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3>Programmatic SEO</h3>
+                    <p>Developed and optimized thousands of scalable SEO landing pages using programmatic SEO strategies. Created dynamic templates for procedures, specialties, diseases, doctors, and more.</p>
+                    <div class="experience-tags mt-2">
+                        <span>Programmatic SEO</span>
+                        <span>Dynamic Pages</span>
+                        <span>Schema</span>
+                        <span>Automation</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -621,25 +602,7 @@
                     </div>
                 </div>
                  <div class="contact-form glass">
-                    <!--
-                        FIX: form now POSTs to FormSubmit (https://formsubmit.co),
-                        a free service that forwards submissions straight to your
-                        inbox with zero backend code required.
-
-                        IMPORTANT ONE-TIME STEP:
-                        The very first time someone submits this form, FormSubmit
-                        will send poluarunkumar627@gmail.com a confirmation email —
-                        click "Activate Form" in that email once, and every
-                        submission after that will land in the inbox automatically.
-                    -->
-                    <form id="contactForm" action="https://formsubmit.co/ajax/poluarunkumar627@gmail.com" method="POST">
-                        <!-- Plain auto-response subject line -->
-                        <input type="hidden" name="_subject" value="New portfolio contact form message">
-                        <!-- Disables FormSubmit's captcha page for a smoother UX -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- Honeypot field to cut down on spam bots -->
-                        <input type="text" name="_honey" style="display:none">
-
+                    <form id="contactForm" action="https://formspree.io/f/xyzgwqbq" method="POST">
                         <div class="input-group"><input type="text" id="name" name="name" placeholder="Your Name" required></div>
                         <div class="input-group"><input type="email" id="email" name="email" placeholder="Your Email" required></div>
                         <div class="input-group"><input type="text" id="subject" name="subject" placeholder="Subject"></div>
