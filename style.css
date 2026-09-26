@@ -1283,10 +1283,10 @@ grid-template-columns:1fr;
 WRAPPER
 =====================================*/
 .skills-wrapper{
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:60px;
-align-items:start;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:start;
 }
 /*=====================================
 LEFT SIDE
@@ -1371,9 +1371,10 @@ width:88%;
 RIGHT SIDE
 =====================================*/
 .skills-right{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    align-content:start;
 }
 /*=====================================
 TOOL CARD
@@ -1611,21 +1612,31 @@ rgba(255,255,255,.04)
 RESPONSIVE
 =====================================*/
 @media(max-width:992px){
-.services-grid{
-grid-template-columns:repeat(2,1fr);
+.skills-wrapper{
+grid-template-columns:1fr;
+}
+.skills-right{
+grid-template-columns:repeat(3,1fr);
+margin-top:40px;
 }
 }
 @media(max-width:576px){
-.services-grid{
-grid-template-columns:1fr;
+.skills-right{
+grid-template-columns:repeat(2,1fr);
 }
-.service-card{
-padding:30px;
+.skill-item{
+padding:20px;
 }
-.service-icon{
-width:70px;
-height:70px;
-font-size:26px;
+.tool-card{
+padding:20px 10px;
+}
+.tool-card i{
+width:55px;
+height:55px;
+font-size:22px;
+}
+.competency-grid{
+justify-content:flex-start;
 }
 }
 /*==================================================
