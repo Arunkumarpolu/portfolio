@@ -349,12 +349,13 @@ justify-content:space-between;
 LOGO
 ==================================================*/
 .logo{
-display:flex;
-align-items:center;
-font-size:1.8rem;
-font-weight:700;
-color:var(--white);
-transition:.3s;
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+    font-size:1.65rem;
+    font-weight:700;
+    color:var(--white);
+    transition:.3s;
 }
 .logo span{
 color:var(--primary);
@@ -1446,24 +1447,31 @@ transform:translateY(-4px);
 /*=====================================
 RESPONSIVE
 =====================================*/
+@media(max-width:1100px){
+.nav-links{
+gap:18px;
+}
+.nav-links a{
+font-size:14px;
+}
+.logo{
+font-size:1.5rem;
+}
+.header-actions{
+gap:10px;
+}
+}
 @media(max-width:992px){
-.skills-wrapper{
-grid-template-columns:1fr;
+.navbar{
+display:none;
 }
-.skills-right{
-grid-template-columns:repeat(2,1fr);
-margin-top:40px;
+#menu-btn{
+display:flex;
+align-items:center;
+justify-content:center;
 }
-}
-@media(max-width:576px){
-.skills-right{
-grid-template-columns:1fr;
-}
-.skill-item{
-padding:20px;
-}
-.competency-grid{
-justify-content:flex-start;
+.header-actions .btn{
+display:none;
 }
 }
 /*==================================================
