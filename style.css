@@ -73,6 +73,7 @@ list-style:none;
 img{
 display:block;
 max-width:100%;
+height:auto;
 }
 /*==================================================
 TYPOGRAPHY
@@ -103,9 +104,24 @@ CONTAINER
 width:min(1200px,90%);
 margin:auto;
 }
-section{
-padding:110px 0;
-position:relative;
+@media(max-width:576px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .section-heading{
+        margin-bottom:45px;
+    }
+
+    .section-heading h2{
+        font-size:2rem;
+    }
+
+    .section-heading p{
+        font-size:.95rem;
+    }
+
 }
 /*==================================================
 SECTION TITLE
@@ -249,6 +265,11 @@ pointer-events:none;
 transform:translate(-50%,-50%);
 z-index:99999;
 transition:transform .08s linear;
+}
+@media (hover: none), (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
 }
 /*==================================================
 BACKGROUND BLOBS
@@ -569,7 +590,7 @@ position:absolute;
 border-radius:50%;
 filter:blur(140px);
 opacity:.18;
-animation:floatBlob 8s ease-in-out infinite;
+animation:floatBlob 4s ease-in-out infinite;
 }
 .circle-1{
 width:450px;
@@ -625,18 +646,23 @@ color:var(--primary);
 font-weight:600;
 }
 .hero-content h1{
-font-size:4.5rem;
-line-height:1.1;
-margin:25px 0;
+    font-size:clamp(2.8rem, 6vw, 4.5rem);
+    line-height:1.1;
+    margin:25px 0;
 }
-.hero-content h1 span{
-color:var(--primary);
+h1{
+    font-size:clamp(2.5rem, 5vw, 4rem);
+    font-weight:700;
 }
-.hero-content h2{
-font-size:1.5rem;
-color:var(--gray);
-margin-bottom:20px;
-min-height:40px;
+
+h2{
+    font-size:clamp(2rem, 4vw, 3rem);
+    font-weight:700;
+}
+
+h3{
+    font-size:clamp(1.4rem, 2vw, 1.7rem);
+    font-weight:600;
 }
 .hero-content p{
 font-size:1.05rem;
@@ -956,10 +982,21 @@ flex-wrap:wrap;
 STATISTICS
 =====================================*/
 .about-stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-margin-top:90px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:90px;
+}
+@media(max-width:992px){
+    .about-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:576px){
+    .about-stats{
+        grid-template-columns:1fr;
+    }
 }
 /*=====================================
 STAT CARD
@@ -1239,13 +1276,6 @@ align-items:flex-start;
 .experience-achievements{
 grid-template-columns:1fr;
 }
-}
-/*==================================================
-SKILLS SECTION
-==================================================*/
-#skills{
-position:relative;
-overflow:hidden;
 }
 /*=====================================
 WRAPPER
@@ -2109,10 +2139,12 @@ transition:.35s;
 .input-group textarea::placeholder{
 color:var(--gray);
 }
-.input-group input:focus,
-.input-group textarea:focus{
-border-color:var(--primary);
-box-shadow:0 0 0 4px rgba(59,130,246,.12);
+.input-group input:focus-visible,
+.input-group textarea:focus-visible,
+button:focus-visible,
+a:focus-visible{
+    outline:3px solid rgba(59,130,246,.45);
+    outline-offset:3px;
 }
 .input-group textarea{
 resize:none;
@@ -2445,5 +2477,25 @@ width:400px;
 height:400px;
 opacity:0;
 }
+}
+/*==================================================
+REDUCED MOTION
+==================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
 }
 
