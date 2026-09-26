@@ -137,15 +137,12 @@ TYPING ANIMATION
 const typingElement=document.getElementById("typing-text");
 const words=[
 "Technical SEO Specialist",
-"Local SEO Expert",
 "SEO Specialist",
 "Digital Marketing Professional",
-"Website Optimization Expert",
 "Search Engine Optimization Specialist",
 "SEO Analyst",
 "Programmatic SEO Strategist",
-"On-Page SEO Specialist",
-"Off-Page SEO Expert",
+"SEO Automation Specialist"
 ];
 let wordIndex=0;
 let charIndex=0;
@@ -225,21 +222,27 @@ skillObserver.observe(bar);
 /*==================================================
 SCROLL REVEAL
 ==================================================*/
-const revealElements=document.querySelectorAll(
-".section-heading,.about-wrapper,.timeline-item,.skill-item,.tool-card,.project-card,.service-card,.education-card,.contact-card"
+/*==================================================
+SCROLL REVEAL
+==================================================*/
+
+const revealElements = document.querySelectorAll(
+    ".section-heading, .about-wrapper, .timeline-item, .skill-item, .tool-card, .service-card, .education-card, .contact-card"
 );
-const revealObserver=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
+
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
 });
-},{
-threshold:.15
-});
-revealElements.forEach(el=>{
-el.classList.add("hidden-animation");
-revealObserver.observe(el);
+
+revealElements.forEach(el => {
+    el.classList.add("hidden-animation");
+    revealObserver.observe(el);
 });
 /*==================================================
 TOAST NOTIFICATION
