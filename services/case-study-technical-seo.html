@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==============================
+         BASIC META TAGS
+    ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technical SEO Audit Case Study | Arun Kumar P</title>
+
+    <meta name="description"
+        content="Technical SEO audit case study by Arun Kumar P covering crawlability, indexing, Core Web Vitals, schema, redirects, internal linking and SEO issues.">
+
+    <meta name="author" content="Arun Kumar P">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://arunkumarpolu.github.io/portfolio/services/case-study-technical-seo.html">
+
+
+    <!-- ==============================
+         OPEN GRAPH
+    ============================== -->
+    <meta property="og:title" content="Technical SEO Audit Case Study | Arun Kumar P">
+
+    <meta property="og:description"
+        content="A practical Technical SEO Audit case study covering crawling, indexing, website architecture, structured data, performance and SEO recommendations.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://arunkumarpolu.github.io/portfolio/services/case-study-technical-seo.html">
+
+    <meta property="og:image" content="https://arunkumarpolu.github.io/portfolio/assets/images/profile.png">
+
+
+    <!-- ==============================
+         TWITTER
+    ============================== -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Technical SEO Audit Case Study | Arun Kumar P">
+
+    <meta name="twitter:description"
+        content="Technical SEO case study covering crawling, indexing, redirects, schema, Core Web Vitals and website architecture.">
+
+    <meta name="twitter:image" content="https://arunkumarpolu.github.io/portfolio/assets/images/profile.png">
+
+
+    <!-- ==============================
+         FAVICON
+    ============================== -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico.png">
+
+
+    <!-- ==============================
+         MAIN CSS
+    ============================== -->
+    <link rel="stylesheet" href="../style.css">
+
+
+    <!-- ==============================
+         CASE STUDY PAGE STYLES
+    ============================== -->
+    <style>
+        /* ==========================================
+           CASE STUDY PAGE
+        ========================================== */
+
+        .case-study-page {
+            padding-top: 90px;
+        }
+
+        .case-study-container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+
+        /* ==========================================
+           BREADCRUMB
+        ========================================== */
+
+        .case-breadcrumb {
+            padding: 28px 0 10px;
+            font-size: 14px;
+        }
+
+        .case-breadcrumb a {
+            text-decoration: none;
+        }
+
+        .case-breadcrumb span {
+            margin: 0 7px;
+            opacity: .65;
+        }
+
+
+        /* ==========================================
+           HERO
+        ========================================== */
+
+        .case-study-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 65px 0 90px;
+        }
+
+        .case-study-hero-content {
+            max-width: 850px;
+        }
+
+        .case-label {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .case-study-hero h1 {
+            font-size: clamp(40px, 7vw, 72px);
+            line-height: 1.08;
+            margin-bottom: 25px;
+        }
+
+        .case-study-hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 760px;
+            margin-bottom: 30px;
+        }
+
+        .case-hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .case-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s ease;
+            border: 1px solid rgba(128, 128, 128, .35);
+        }
+
+        .case-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .case-btn-primary {
+            background: var(--primary-color, #6c63ff);
+            color: #fff;
+            border-color: transparent;
+        }
+
+
+        /* ==========================================
+           QUICK INFORMATION
+        ========================================== */
+
+        .project-summary {
+            padding: 30px 0 90px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .summary-card {
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+            padding: 25px;
+            transition: .3s;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .summary-card h3 {
+            font-size: 15px;
+            margin-bottom: 10px;
+            opacity: .7;
+        }
+
+        .summary-card p {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+
+        /* ==========================================
+           SECTIONS
+        ========================================== */
+
+        .case-section {
+            padding: 90px 0;
+        }
+
+        .case-section-header {
+            max-width: 780px;
+            margin-bottom: 50px;
+        }
+
+        .case-section-tag {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .case-section h2 {
+            font-size: clamp(30px, 5vw, 46px);
+            margin-bottom: 20px;
+        }
+
+        .case-section-header p,
+        .case-content p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           CHALLENGE CARDS
+        ========================================== */
+
+        .case-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .case-card {
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+            padding: 28px;
+            transition: .3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-card-icon {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .case-card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .case-card p {
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           AUDIT PROCESS
+        ========================================== */
+
+        .audit-process {
+            display: grid;
+            gap: 22px;
+        }
+
+        .audit-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 25px;
+            padding: 30px;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+        }
+
+        .audit-number {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            font-weight: 700;
+            border: 1px solid rgba(128, 128, 128, .3);
+        }
+
+        .audit-step h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .audit-step p {
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           ISSUES TABLE
+        ========================================== */
+
+        .audit-table-wrapper {
+            overflow-x: auto;
+            border-radius: 14px;
+            border: 1px solid rgba(128, 128, 128, .25);
+        }
+
+        .audit-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 750px;
+        }
+
+        .audit-table th,
+        .audit-table td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid rgba(128, 128, 128, .2);
+            vertical-align: top;
+        }
+
+        .audit-table th {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+        }
+
+        .priority-high {
+            font-weight: 700;
+        }
+
+        .priority-medium {
+            font-weight: 700;
+        }
+
+
+        /* ==========================================
+           CHECKLIST
+        ========================================== */
+
+        .seo-checklist {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .check-item {
+            display: flex;
+            gap: 14px;
+            padding: 18px 20px;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 12px;
+        }
+
+        .check-icon {
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+
+        /* ==========================================
+           TOOLS
+        ========================================== */
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tool-item {
+            padding: 12px 18px;
+            border: 1px solid rgba(128, 128, 128, .3);
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+
+        /* ==========================================
+           RECOMMENDATIONS
+        ========================================== */
+
+        .recommendation-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .recommendation-item {
+            padding: 24px;
+            border-left: 4px solid var(--primary-color, #6c63ff);
+            border-radius: 10px;
+            border-top: 1px solid rgba(128, 128, 128, .2);
+            border-right: 1px solid rgba(128, 128, 128, .2);
+            border-bottom: 1px solid rgba(128, 128, 128, .2);
+        }
+
+        .recommendation-item h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .recommendation-item p {
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           RESULTS
+        ========================================== */
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 35px 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(128, 128, 128, .25);
+        }
+
+        .result-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .result-card p {
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           CTA
+        ========================================== */
+
+        .case-cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .case-cta-box {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 24px;
+            padding: 60px 35px;
+        }
+
+        .case-cta-box h2 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 20px;
+        }
+
+        .case-cta-box p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           SIMPLE FOOTER
+        ========================================== */
+
+        .case-footer {
+            border-top: 1px solid rgba(128, 128, 128, .2);
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        .case-footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .case-footer-links a {
+            text-decoration: none;
+        }
+
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .case-study-page {
+                padding-top: 65px;
+            }
+
+            .case-study-hero {
+                min-height: auto;
+                padding: 50px 0 70px;
+            }
+
+            .summary-grid,
+            .case-grid-3,
+            .seo-checklist {
+                grid-template-columns: 1fr;
+            }
+
+            .audit-step {
+                grid-template-columns: 1fr;
+            }
+
+            .case-section {
+                padding: 65px 0;
+            }
+
+            .case-cta-box {
+                padding: 45px 22px;
+            }
+
+        }
+    </style>
+
+
+    <!-- ==============================
+         BREADCRUMB SCHEMA
+    ============================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://arunkumarpolu.github.io/portfolio/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Case Studies",
+                "item": "https://arunkumarpolu.github.io/portfolio/#case-studies"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Technical SEO Audit Case Study",
+                "item": "https://arunkumarpolu.github.io/portfolio/services/case-study-technical-seo.html"
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- ==============================
+         WEBPAGE SCHEMA
+    ============================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Technical SEO Audit Case Study",
+        "url": "https://arunkumarpolu.github.io/portfolio/services/case-study-technical-seo.html",
+        "description": "Technical SEO audit case study covering crawlability, indexing, redirects, structured data, Core Web Vitals and website architecture.",
+        "author": {
+            "@type": "Person",
+            "name": "Arun Kumar P",
+            "url": "https://arunkumarpolu.github.io/portfolio/"
+        }
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         MAIN PAGE
+    ============================== -->
+
+    <main class="case-study-page">
+
+
+        <!-- ==============================
+             BREADCRUMB
+        ============================== -->
+
+        <div class="case-study-container">
+
+            <nav class="case-breadcrumb" aria-label="Breadcrumb">
+
+                <a href="../index.html">Home</a>
+
+                <span>›</span>
+
+                <a href="../index.html#case-studies">
+                    Case Studies
+                </a>
+
+                <span>›</span>
+
+                <span>
+                    Technical SEO Audit
+                </span>
+
+            </nav>
+
+        </div>
+
+
+        <!-- ==============================
+             HERO SECTION
+        ============================== -->
+
+        <section class="case-study-hero">
+
+            <div class="case-study-container">
+
+                <div class="case-study-hero-content">
+
+                    <span class="case-label">
+                        Technical SEO Case Study
+                    </span>
+
+                    <h1>
+                        Technical SEO Audit &
+                        Website Optimization
+                    </h1>
+
+                    <p>
+                        A practical Technical SEO audit workflow focused on
+                        identifying crawlability, indexation, website architecture,
+                        structured data, performance, redirect, internal linking,
+                        and on-page technical SEO issues.
+                    </p>
+
+
+                    <div class="case-hero-buttons">
+
+                        <a href="#audit-process" class="case-btn case-btn-primary">
+
+                            View Audit Process
+
+                        </a>
+
+
+                        <a href="../index.html#contact" class="case-btn">
+
+                            Contact Me
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PROJECT SUMMARY
+        ============================== -->
+
+        <section class="project-summary">
+
+            <div class="case-study-container">
+
+                <div class="summary-grid">
+
+
+                    <div class="summary-card">
+
+                        <h3>Project Type</h3>
+
+                        <p>
+                            Technical SEO Audit
+                        </p>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <h3>Focus</h3>
+
+                        <p>
+                            Crawling & Indexing
+                        </p>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <h3>SEO Area</h3>
+
+                        <p>
+                            Technical SEO
+                        </p>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <h3>Role</h3>
+
+                        <p>
+                            SEO Specialist
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PROJECT OVERVIEW
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Project Overview
+                    </span>
+
+                    <h2>
+                        Why a Technical SEO Audit Was Required
+                    </h2>
+
+                    <p>
+                        Large websites can develop technical SEO problems as new
+                        pages, categories, location pages, templates, redirects,
+                        structured data and internal links are added over time.
+                    </p>
+
+                </div>
+
+
+                <div class="case-content">
+
+                    <p>
+                        The objective of this audit was to systematically review
+                        the technical health of the website and identify issues
+                        that could affect search engine crawling, indexing,
+                        ranking signals, user experience and organic search
+                        performance.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        The audit covered important areas such as crawlability,
+                        indexation, canonical implementation, robots directives,
+                        XML sitemaps, redirects, HTTP status codes, duplicate
+                        content, internal linking, schema markup, page speed,
+                        mobile usability and Core Web Vitals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CHALLENGES
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        SEO Challenges
+                    </span>
+
+                    <h2>
+                        Key Technical SEO Areas Reviewed
+                    </h2>
+
+                    <p>
+                        The audit was structured around technical factors that
+                        directly influence how search engines discover,
+                        understand and index website pages.
+                    </p>
+
+                </div>
+
+
+                <div class="case-grid-3">
+
+
+                    <div class="case-card">
+
+                        <div class="case-card-icon">
+                            🔍
+                        </div>
+
+                        <h3>
+                            Crawlability
+                        </h3>
+
+                        <p>
+                            Checked whether important website pages were easily
+                            accessible to search engine crawlers and whether
+                            unnecessary URLs were consuming crawl resources.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <div class="case-card-icon">
+                            📑
+                        </div>
+
+                        <h3>
+                            Indexation
+                        </h3>
+
+                        <p>
+                            Reviewed indexability, noindex directives,
+                            canonical URLs, duplicate pages and Google Search
+                            Console indexing signals.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <div class="case-card-icon">
+                            🔗
+                        </div>
+
+                        <h3>
+                            Internal Linking
+                        </h3>
+
+                        <p>
+                            Identified orphan pages, weak internal links,
+                            excessive click depth and opportunities to improve
+                            website architecture.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <div class="case-card-icon">
+                            ↪️
+                        </div>
+
+                        <h3>
+                            Redirects
+                        </h3>
+
+                        <p>
+                            Reviewed broken URLs, redirect chains,
+                            redirect loops and outdated pages requiring
+                            relevant permanent redirects.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <div class="case-card-icon">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Website Performance
+                        </h3>
+
+                        <p>
+                            Checked page loading performance and Core Web
+                            Vitals factors affecting SEO and user experience.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <div class="case-card-icon">
+                            🧩
+                        </div>
+
+                        <h3>
+                            Structured Data
+                        </h3>
+
+                        <p>
+                            Validated schema implementation and checked
+                            structured data for errors, warnings and incorrect
+                            markup.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             AUDIT PROCESS
+        ============================== -->
+
+        <section class="case-section" id="audit-process">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Audit Process
+                    </span>
+
+                    <h2>
+                        My Technical SEO Audit Workflow
+                    </h2>
+
+                    <p>
+                        The audit followed a structured process so that
+                        high-impact technical issues could be identified,
+                        prioritized and communicated clearly.
+                    </p>
+
+                </div>
+
+
+                <div class="audit-process">
+
+
+                    <!-- STEP 1 -->
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Website Crawling
+                            </h3>
+
+                            <p>
+                                Crawled the website to collect page URLs,
+                                HTTP status codes, page titles, meta
+                                descriptions, canonical tags, headings,
+                                directives, internal links and other
+                                technical SEO elements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Google Search Console Analysis
+                            </h3>
+
+                            <p>
+                                Reviewed indexing reports, page indexing
+                                status, search performance, crawl-related
+                                signals and URL inspection information to
+                                identify potential indexation problems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Indexability Review
+                            </h3>
+
+                            <p>
+                                Checked robots.txt, meta robots tags,
+                                canonical URLs, XML sitemaps and indexability
+                                signals to make sure important URLs could be
+                                discovered and indexed correctly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 4 -->
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            04
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Internal Link Analysis
+                            </h3>
+
+                            <p>
+                                Reviewed internal linking patterns, orphan
+                                pages, crawl depth and anchor text to improve
+                                website discoverability and page authority
+                                distribution.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 5 -->
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            05
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Page Performance Analysis
+                            </h3>
+
+                            <p>
+                                Used performance testing tools to review
+                                loading speed, mobile performance and Core
+                                Web Vitals improvement opportunities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 6 -->
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            06
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Prioritization & Recommendations
+                            </h3>
+
+                            <p>
+                                Grouped identified SEO issues according to
+                                impact and implementation priority so
+                                developers and content teams could address
+                                critical issues first.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             AUDIT FINDINGS
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Audit Findings
+                    </span>
+
+                    <h2>
+                        Technical SEO Issues Reviewed
+                    </h2>
+
+                    <p>
+                        The following table represents the type of issues
+                        evaluated during the technical SEO audit process.
+                    </p>
+
+                </div>
+
+
+                <div class="audit-table-wrapper">
+
+                    <table class="audit-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    SEO Issue
+                                </th>
+
+                                <th>
+                                    Potential Impact
+                                </th>
+
+                                <th>
+                                    Priority
+                                </th>
+
+                                <th>
+                                    Recommended Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    Broken Internal Links
+                                </td>
+
+                                <td>
+                                    Poor crawlability and user experience
+                                </td>
+
+                                <td class="priority-high">
+                                    High
+                                </td>
+
+                                <td>
+                                    Update or replace broken links with
+                                    relevant live URLs.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Redirect Chains
+                                </td>
+
+                                <td>
+                                    Crawl inefficiency and slower page access
+                                </td>
+
+                                <td class="priority-medium">
+                                    Medium
+                                </td>
+
+                                <td>
+                                    Redirect source URLs directly to the
+                                    final destination.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Duplicate Metadata
+                                </td>
+
+                                <td>
+                                    Weak page differentiation
+                                </td>
+
+                                <td>
+                                    Medium
+                                </td>
+
+                                <td>
+                                    Create unique page titles and meta
+                                    descriptions based on search intent.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Missing Canonical Tags
+                                </td>
+
+                                <td>
+                                    Duplicate URL signals
+                                </td>
+
+                                <td class="priority-high">
+                                    High
+                                </td>
+
+                                <td>
+                                    Add correct canonical URLs to applicable
+                                    pages.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Orphan Pages
+                                </td>
+
+                                <td>
+                                    Difficult for search engines and users
+                                    to discover
+                                </td>
+
+                                <td class="priority-high">
+                                    High
+                                </td>
+
+                                <td>
+                                    Add contextual internal links from
+                                    relevant website sections.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Schema Errors
+                                </td>
+
+                                <td>
+                                    Structured data eligibility issues
+                                </td>
+
+                                <td>
+                                    Medium
+                                </td>
+
+                                <td>
+                                    Validate and correct required structured
+                                    data properties.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Slow Page Performance
+                                </td>
+
+                                <td>
+                                    Reduced user experience and Core Web
+                                    Vitals performance
+                                </td>
+
+                                <td class="priority-high">
+                                    High
+                                </td>
+
+                                <td>
+                                    Optimize images, scripts, CSS and
+                                    server-related performance factors.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Incorrect Indexing Directives
+                                </td>
+
+                                <td>
+                                    Important pages may not be indexed
+                                </td>
+
+                                <td class="priority-high">
+                                    High
+                                </td>
+
+                                <td>
+                                    Review robots directives and remove
+                                    unintended indexing restrictions.
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CRAWL & INDEXING
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Crawl & Indexing
+                    </span>
+
+                    <h2>
+                        Crawlability and Indexation Checks
+                    </h2>
+
+                    <p>
+                        Crawlability and indexation were reviewed to ensure
+                        that important pages could be discovered and
+                        processed correctly by search engines.
+                    </p>
+
+                </div>
+
+
+                <div class="seo-checklist">
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Robots.txt review
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Meta robots directives
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            XML sitemap validation
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Canonical tag analysis
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Google Search Console indexing status
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            HTTP status code analysis
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Duplicate URL identification
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Crawl depth analysis
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Orphan page identification
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Redirect chain review
+                        </span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ON PAGE TECHNICAL AUDIT
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        On-Page Technical Review
+                    </span>
+
+                    <h2>
+                        Metadata & Page Element Analysis
+                    </h2>
+
+                    <p>
+                        Important on-page elements were reviewed at scale
+                        to detect missing, duplicated or incorrectly
+                        implemented SEO elements.
+                    </p>
+
+                </div>
+
+
+                <div class="case-grid-3">
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Page Titles
+                        </h3>
+
+                        <p>
+                            Checked missing, duplicate, excessively long
+                            and weak page titles.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Meta Descriptions
+                        </h3>
+
+                        <p>
+                            Reviewed missing, duplicate and poorly
+                            optimized meta descriptions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Heading Structure
+                        </h3>
+
+                        <p>
+                            Checked H1 availability, duplicate H1 tags
+                            and heading hierarchy.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Canonicals
+                        </h3>
+
+                        <p>
+                            Reviewed self-referencing and incorrect
+                            canonical implementations.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Image SEO
+                        </h3>
+
+                        <p>
+                            Identified missing alt text, large image files
+                            and image optimization opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Internal Links
+                        </h3>
+
+                        <p>
+                            Reviewed contextual links, navigation paths,
+                            broken links and orphan URLs.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CORE WEB VITALS
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Performance
+                    </span>
+
+                    <h2>
+                        Core Web Vitals & PageSpeed Review
+                    </h2>
+
+                    <p>
+                        Website performance was analyzed to identify
+                        technical factors that could negatively affect
+                        page experience and search performance.
+                    </p>
+
+                </div>
+
+
+                <div class="case-grid-3">
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Largest Contentful Paint
+                        </h3>
+
+                        <p>
+                            Reviewed loading behavior of the main visible
+                            page content and large page resources.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Interaction Performance
+                        </h3>
+
+                        <p>
+                            Reviewed JavaScript and page interactivity
+                            factors that could delay user interactions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="case-card">
+
+                        <h3>
+                            Cumulative Layout Shift
+                        </h3>
+
+                        <p>
+                            Checked unexpected layout movement caused by
+                            images, fonts, advertisements and dynamically
+                            loaded elements.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             STRUCTURED DATA
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Structured Data
+                    </span>
+
+                    <h2>
+                        Schema Markup Validation
+                    </h2>
+
+                    <p>
+                        Structured data implementation was reviewed to
+                        make sure schema markup was valid, relevant and
+                        technically implemented correctly.
+                    </p>
+
+                </div>
+
+
+                <div class="seo-checklist">
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Breadcrumb schema
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            FAQ schema
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Organization structured data
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            WebPage structured data
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Schema syntax validation
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Required property validation
+                        </span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             RECOMMENDATIONS
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Recommendations
+                    </span>
+
+                    <h2>
+                        Technical SEO Recommendations
+                    </h2>
+
+                    <p>
+                        Recommendations were prioritized based on SEO
+                        impact, scalability and implementation effort.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation-list">
+
+
+                    <div class="recommendation-item">
+
+                        <h3>
+                            Fix Critical Crawl Errors
+                        </h3>
+
+                        <p>
+                            Resolve broken internal links, incorrect status
+                            codes, redirect chains and crawl-blocking issues
+                            affecting important URLs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="recommendation-item">
+
+                        <h3>
+                            Improve Indexation Control
+                        </h3>
+
+                        <p>
+                            Review canonical tags, robots directives,
+                            XML sitemaps and duplicate pages to improve
+                            indexation signals.
+                        </p>
+
+                    </div>
+
+
+                    <div class="recommendation-item">
+
+                        <h3>
+                            Strengthen Internal Linking
+                        </h3>
+
+                        <p>
+                            Add contextual links to important pages,
+                            reduce excessive click depth and resolve
+                            orphan pages.
+                        </p>
+
+                    </div>
+
+
+                    <div class="recommendation-item">
+
+                        <h3>
+                            Optimize Page Performance
+                        </h3>
+
+                        <p>
+                            Improve page speed through image optimization,
+                            script reduction, CSS improvements and
+                            performance-focused development changes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="recommendation-item">
+
+                        <h3>
+                            Validate Structured Data
+                        </h3>
+
+                        <p>
+                            Correct schema errors and ensure structured
+                            data accurately represents visible page content.
+                        </p>
+
+                    </div>
+
+
+                    <div class="recommendation-item">
+
+                        <h3>
+                            Monitor Search Console
+                        </h3>
+
+                        <p>
+                            Continuously review indexing, performance and
+                            crawl reports after technical changes are
+                            implemented.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             TOOLS
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Tools
+                    </span>
+
+                    <h2>
+                        SEO Tools Used
+                    </h2>
+
+                    <p>
+                        Different SEO and development tools can be used
+                        together to identify, validate and monitor
+                        technical SEO issues.
+                    </p>
+
+                </div>
+
+
+                <div class="tools-list">
+
+                    <span class="tool-item">
+                        Google Search Console
+                    </span>
+
+                    <span class="tool-item">
+                        Screaming Frog
+                    </span>
+
+                    <span class="tool-item">
+                        PageSpeed Insights
+                    </span>
+
+                    <span class="tool-item">
+                        Google Analytics
+                    </span>
+
+                    <span class="tool-item">
+                        Rich Results Test
+                    </span>
+
+                    <span class="tool-item">
+                        Chrome DevTools
+                    </span>
+
+                    <span class="tool-item">
+                        Google Sheets
+                    </span>
+
+                    <span class="tool-item">
+                        Excel
+                    </span>
+
+                    <span class="tool-item">
+                        Python
+                    </span>
+
+                    <span class="tool-item">
+                        Google Apps Script
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             IMPLEMENTATION
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Implementation
+                    </span>
+
+                    <h2>
+                        SEO Issue Prioritization Workflow
+                    </h2>
+
+                    <p>
+                        Technical SEO recommendations become more useful
+                        when they are organized according to business
+                        impact and implementation priority.
+                    </p>
+
+                </div>
+
+
+                <div class="audit-process">
+
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            P1
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Critical Issues
+                            </h3>
+
+                            <p>
+                                Issues that could prevent important pages
+                                from being crawled, indexed or accessed
+                                correctly were prioritized first.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            P2
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                High-Impact SEO Issues
+                            </h3>
+
+                            <p>
+                                Issues affecting internal linking,
+                                duplicate content, canonicalization,
+                                performance and website architecture were
+                                prioritized next.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="audit-step">
+
+                        <div class="audit-number">
+                            P3
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Optimization Opportunities
+                            </h3>
+
+                            <p>
+                                Lower-risk improvements such as metadata
+                                enhancements, additional internal links
+                                and structured data improvements were
+                                grouped for ongoing optimization.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             RESULTS
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Outcome
+                    </span>
+
+                    <h2>
+                        Audit Deliverables
+                    </h2>
+
+                    <p>
+                        Instead of using unsupported performance claims,
+                        this case study focuses on the practical
+                        deliverables produced through the audit.
+                    </p>
+
+                </div>
+
+
+                <div class="result-grid">
+
+
+                    <div class="result-card">
+
+                        <h3>
+                            Technical Issue Identification
+                        </h3>
+
+                        <p>
+                            Created a structured view of technical SEO
+                            issues affecting crawling, indexing,
+                            architecture and page performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="result-card">
+
+                        <h3>
+                            Prioritized Recommendations
+                        </h3>
+
+                        <p>
+                            Organized technical fixes according to their
+                            SEO impact and implementation priority.
+                        </p>
+
+                    </div>
+
+
+                    <div class="result-card">
+
+                        <h3>
+                            Developer-Ready Actions
+                        </h3>
+
+                        <p>
+                            Converted audit findings into clear,
+                            actionable recommendations that could be
+                            shared with development and content teams.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             LEARNINGS
+        ============================== -->
+
+        <section class="case-section">
+
+            <div class="case-study-container">
+
+                <div class="case-section-header">
+
+                    <span class="case-section-tag">
+                        Key Learnings
+                    </span>
+
+                    <h2>
+                        What This Project Demonstrates
+                    </h2>
+
+                </div>
+
+
+                <div class="seo-checklist">
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Ability to perform structured technical SEO audits
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Understanding of crawling and indexing
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Knowledge of canonicalization and redirects
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Internal linking and website architecture analysis
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Structured data validation
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Core Web Vitals and PageSpeed analysis
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            SEO issue prioritization
+                        </span>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+                        <span>
+                            Collaboration with development and content teams
+                        </span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CTA
+        ============================== -->
+
+        <section class="case-cta">
+
+            <div class="case-study-container">
+
+                <div class="case-cta-box">
+
+                    <span class="case-section-tag">
+                        Let's Connect
+                    </span>
+
+                    <h2>
+                        Need Technical SEO Expertise?
+                    </h2>
+
+                    <p>
+                        I work on Technical SEO, Programmatic SEO,
+                        Local SEO, SEO Automation, content optimization,
+                        indexing, structured data and large-scale website
+                        SEO analysis.
+                    </p>
+
+
+                    <div class="case-hero-buttons" style="justify-content:center;">
+
+                        <a href="../index.html#contact" class="case-btn case-btn-primary">
+
+                            Contact Me
+
+                        </a>
+
+
+                        <a href="../index.html#case-studies" class="case-btn">
+
+                            View More Case Studies
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer class="case-footer">
+
+        <div class="case-study-container">
+
+            <div class="case-footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#experience">
+                    Experience
+                </a>
+
+                <a href="../index.html#skills">
+                    Skills
+                </a>
+
+                <a href="../index.html#services">
+                    Services
+                </a>
+
+                <a href="../index.html#case-studies">
+                    Case Studies
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <p>
+                © 2026 Arun Kumar P. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================
+         MAIN JS
+    ============================== -->
+
+    <script src="../script.js"></script>
+
+
+</body>
+
+</html>

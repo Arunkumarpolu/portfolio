@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico.png">
+
+    <title>Programmatic SEO Specialist | Arun Kumar P</title>
+    <meta name="description" content="Explore Arun Kumar P's Programmatic SEO expertise, including scalable landing pages, keyword mapping, templates, internal linking, automation and technical SEO.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arunkumarpolu.github.io/portfolio/services/programmatic-seo.html">
+
+    <meta property="og:title" content="Programmatic SEO Specialist | Arun Kumar P">
+    <meta property="og:description" content="Programmatic SEO expertise covering scalable page creation, keyword mapping, templates, internal linking, automation and technical SEO.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arunkumarpolu.github.io/portfolio/services/programmatic-seo.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .subpage-hero {
+            position: relative;
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 130px 0 90px;
+        }
+
+        .subpage-hero .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .subpage-hero-content {
+            max-width: 880px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subpage-hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin: 22px 0;
+        }
+
+        .subpage-hero h1 span {
+            color: var(--primary);
+        }
+
+        .subpage-hero p {
+            max-width: 780px;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .subpage-section {
+            padding: 100px 0;
+        }
+
+        .process-section {
+            background: rgba(255,255,255,.02);
+        }
+
+        .section-heading {
+            max-width: 780px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 14px 0;
+        }
+
+        .section-heading p {
+            line-height: 1.8;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-size: .82rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            height: 100%;
+            padding: 32px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(18px);
+            transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 45px rgba(0,0,0,.18);
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 17px;
+            margin-bottom: 22px;
+            color: #fff;
+            background: linear-gradient(135deg,var(--primary),var(--secondary));
+            font-size: 1.4rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .process-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4,minmax(0,1fr)) !important;
+            gap: 22px !important;
+            width: 100%;
+        }
+
+        .process-card {
+            padding: 30px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            transition: transform .3s ease,border-color .3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--primary);
+        }
+
+        .process-number {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .process-card i {
+            display: block;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .workflow-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px;
+            border-radius: 25px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5,minmax(0,1fr));
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .workflow-step {
+            min-height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px 12px;
+            border-radius: 18px;
+            background: rgba(255,255,255,.035);
+            border: 1px solid var(--glass-border);
+        }
+
+        .workflow-step i {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+        }
+
+        .workflow-step strong {
+            font-size: .95rem;
+        }
+
+        .workflow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .subpage-cta {
+            padding: 100px 0;
+        }
+
+        .cta-content {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 55px 35px;
+            text-align: center;
+            border-radius: 28px;
+            background: linear-gradient(135deg,rgba(99,102,241,.14),rgba(14,165,233,.10));
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-content h2 {
+            margin: 15px 0;
+        }
+
+        .cta-content p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            line-height: 1.8;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-inner p {
+            margin: 0;
+        }
+
+        .footer-inner a {
+            color: var(--primary);
+        }
+
+        #mobile-menu {
+            overflow-y: auto;
+        }
+
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2,minmax(0,1fr));
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+            }
+
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-arrow {
+                transform: rotate(90deg);
+                min-height: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subpage-hero {
+                min-height: auto;
+                padding: 120px 0 70px;
+            }
+
+            .subpage-section,
+            .subpage-cta {
+                padding: 70px 0;
+            }
+
+            .services-grid,
+            .process-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .service-card,
+            .process-card,
+            .workflow-box {
+                padding: 25px;
+            }
+
+            .cta-content {
+                padding: 40px 22px;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .service-card,
+            .process-card,
+            .btn {
+                transition: none !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Person",
+        "name":"Arun Kumar P",
+        "url":"https://arunkumarpolu.github.io/portfolio/",
+        "jobTitle":"SEO Specialist",
+        "sameAs":[
+            "https://www.linkedin.com/in/arun-polu-a41a87369/",
+            "https://github.com/Arunkumarpolu"
+        ],
+        "knowsAbout":[
+            "Programmatic SEO",
+            "Technical SEO",
+            "Keyword Research",
+            "SEO Automation",
+            "Internal Linking",
+            "Content Optimization"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="progress-bar" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+
+            <a href="../index.html" class="logo" aria-label="Arun Kumar P home">
+                Arun Kumar <span>P</span>
+            </a>
+
+            <nav class="navbar" aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#services" class="active">Services</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+
+                <button id="theme-toggle"
+                        type="button"
+                        aria-label="Switch to light mode"
+                        aria-pressed="false">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+
+                <a href="../index.html#contact"
+                   class="btn btn-primary header-hire-btn"
+                   aria-label="Contact Arun Kumar P">
+                    Hire Me
+                </a>
+
+                <button id="menu-btn"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+        <button id="close-menu"
+                type="button"
+                aria-label="Close navigation menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-overlay" aria-hidden="true"></div>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="subpage-hero">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="gradient-circle circle-1"></div>
+                <div class="gradient-circle circle-2"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="container">
+                <div class="subpage-hero-content">
+
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                        Programmatic SEO
+                    </span>
+
+                    <h1>Programmatic SEO <span>Specialist</span></h1>
+
+                    <p>
+                        I build scalable SEO frameworks that combine keyword research,
+                        structured data, reusable page templates, internal linking and
+                        automation to support large-scale organic search growth.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="../index.html#contact"
+                           class="btn btn-primary"
+                           aria-label="Contact Arun Kumar P">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            Let's Work Together
+                        </a>
+
+                        <a href="../index.html"
+                           class="btn btn-secondary"
+                           aria-label="Back to Arun Kumar P portfolio">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            Back to Portfolio
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section class="subpage-section" id="expertise">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">Expertise</span>
+
+                    <h2>Programmatic SEO Areas I Work On</h2>
+
+                    <p>
+                        My approach focuses on creating scalable page systems without
+                        sacrificing search intent, content quality, technical SEO or
+                        user experience.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-key" aria-hidden="true"></i>
+                        </div>
+                        <h3>Keyword Mapping</h3>
+                        <p>
+                            Map primary, secondary and long-tail keywords to scalable
+                            page types based on search intent, topic relevance and
+                            location or category variations.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+                        </div>
+                        <h3>Page Templates</h3>
+                        <p>
+                            Design reusable SEO page structures with consistent
+                            headings, metadata, content sections, internal links and
+                            structured data.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-database" aria-hidden="true"></i>
+                        </div>
+                        <h3>Structured Data</h3>
+                        <p>
+                            Organize source data and page attributes so scalable pages
+                            can be generated with consistent and relevant information.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-link" aria-hidden="true"></i>
+                        </div>
+                        <h3>Internal Linking</h3>
+                        <p>
+                            Build contextual internal-linking structures that connect
+                            related pages and help users and search engines discover
+                            important content.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <h3>SEO Automation</h3>
+                        <p>
+                            Use spreadsheets, scripts and automation workflows to
+                            streamline repetitive SEO tasks such as URL generation,
+                            metadata checks and content operations.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        </div>
+                        <h3>Location Pages</h3>
+                        <p>
+                            Create scalable location-based page frameworks while
+                            maintaining unique search intent, relevant local signals
+                            and useful page content.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+                        </div>
+                        <h3>URL Architecture</h3>
+                        <p>
+                            Plan logical URL structures, page hierarchies and
+                            taxonomy relationships that support crawling,
+                            discoverability and long-term scalability.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <h3>Performance Monitoring</h3>
+                        <p>
+                            Monitor indexing, rankings, organic traffic and page
+                            performance to identify opportunities and problems across
+                            large page sets.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        </div>
+                        <h3>Quality Control</h3>
+                        <p>
+                            Check scalable pages for duplication, thin content,
+                            incorrect mappings, missing metadata, broken links and
+                            indexing issues before and after deployment.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow -->
+        <section class="subpage-section" id="workflow">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">Framework</span>
+                    <h2>How I Build Programmatic SEO Systems</h2>
+                    <p>
+                        A scalable workflow that connects research, data, templates,
+                        automation and validation.
+                    </p>
+                </div>
+
+                <div class="workflow-box">
+
+                    <div class="workflow">
+
+                        <div class="workflow-step">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            <strong>Research</strong>
+                        </div>
+
+                        <div class="workflow-arrow">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="workflow-step">
+                            <i class="fa-solid fa-database" aria-hidden="true"></i>
+                            <strong>Structure Data</strong>
+                        </div>
+
+                        <div class="workflow-arrow">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="workflow-step">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                            <strong>Build Template</strong>
+                        </div>
+
+                        <div class="workflow-arrow">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="workflow-step">
+                            <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                            <strong>Automate</strong>
+                        </div>
+
+                        <div class="workflow-arrow">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="workflow-step">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <strong>Validate</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="subpage-section process-section" id="process">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">Process</span>
+                    <h2>My Programmatic SEO Process</h2>
+                    <p>
+                        The goal is not simply to create more URLs. It is to create
+                        useful, technically sound pages that match real search intent.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card glass">
+                        <span class="process-number">01</span>
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <h3>Research</h3>
+                        <p>
+                            Identify search demand, keyword patterns, page types and
+                            scalable opportunities.
+                        </p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">02</span>
+                        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                        <h3>Map</h3>
+                        <p>
+                            Map keywords, entities, locations and content requirements
+                            to the correct URL and template.
+                        </p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">03</span>
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h3>Build</h3>
+                        <p>
+                            Create scalable page templates, metadata rules, internal
+                            links and structured data.
+                        </p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">04</span>
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <h3>Validate</h3>
+                        <p>
+                            Check indexing, duplication, technical issues and organic
+                            performance, then refine the framework.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="subpage-cta" id="contact-cta">
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <span class="section-tag">Let's Connect</span>
+
+                    <h2>Need to Scale Your Organic Search?</h2>
+
+                    <p>
+                        Let's discuss your website structure, keyword opportunities,
+                        scalable page requirements and SEO automation workflows.
+                    </p>
+
+                    <a href="../index.html#contact"
+                       class="btn btn-primary"
+                       aria-label="Contact Arun Kumar P">
+                        Contact Me
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to top -->
+    <button id="backToTop"
+            type="button"
+            aria-label="Back to top"
+            title="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Arun Kumar P. All Rights Reserved.</p>
+            <a href="../index.html">Back to Portfolio</a>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+
+    <!-- Page compatibility for menu + theme controls -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeBtn = document.getElementById("close-menu");
+            const overlay = document.querySelector(".menu-overlay");
+
+            function closeMobileMenu() {
+                if (!mobileMenu || !overlay) return;
+
+                mobileMenu.classList.remove("active");
+                overlay.classList.remove("active");
+
+                menuBtn?.setAttribute("aria-expanded", "false");
+                mobileMenu.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("menu-open");
+            }
+
+            function openMobileMenu() {
+                if (!mobileMenu || !overlay) return;
+
+                mobileMenu.classList.add("active");
+                overlay.classList.add("active");
+
+                menuBtn?.setAttribute("aria-expanded", "true");
+                mobileMenu.setAttribute("aria-hidden", "false");
+                document.body.classList.add("menu-open");
+            }
+
+            menuBtn?.addEventListener("click", openMobileMenu);
+            closeBtn?.addEventListener("click", closeMobileMenu);
+            overlay?.addEventListener("click", closeMobileMenu);
+
+            mobileMenu?.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", closeMobileMenu);
+            });
+
+            document.addEventListener("keydown", event => {
+                if (event.key === "Escape") {
+                    closeMobileMenu();
+                }
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 992) {
+                    closeMobileMenu();
+                }
+            });
+
+            const themeToggle = document.getElementById("theme-toggle");
+
+            function syncThemeState() {
+                if (!themeToggle) return;
+
+                const light = document.body.classList.contains("light");
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    light ? "Switch to dark mode" : "Switch to light mode"
+                );
+
+                themeToggle.setAttribute(
+                    "aria-pressed",
+                    String(light)
+                );
+            }
+
+            themeToggle?.addEventListener("click", () => {
+                window.setTimeout(syncThemeState, 0);
+            });
+
+            syncThemeState();
+
+            window.addEventListener("pageshow", closeMobileMenu);
+        });
+    </script>
+
+</body>
+</html>

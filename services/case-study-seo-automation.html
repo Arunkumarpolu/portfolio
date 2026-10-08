@@ -1,0 +1,2770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+         BASIC SEO META TAGS
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        SEO Automation Case Study | Python, Google Sheets & Apps Script | Arun Kumar P
+    </title>
+
+    <meta name="description"
+        content="SEO Automation case study by Arun Kumar P covering Python, Google Sheets, Google Apps Script, automated SEO audits, metadata extraction, schema generation and scalable SEO workflows.">
+
+    <meta name="author" content="Arun Kumar P">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://arunkumarpolu.github.io/portfolio/services/case-study-seo-automation.html">
+
+
+    <!-- ==========================================
+         OPEN GRAPH
+    =========================================== -->
+
+    <meta property="og:title" content="SEO Automation Case Study | Arun Kumar P">
+
+    <meta property="og:description"
+        content="A practical SEO Automation case study covering Python, Google Sheets, Google Apps Script, metadata extraction, URL auditing and structured data workflows.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://arunkumarpolu.github.io/portfolio/services/case-study-seo-automation.html">
+
+    <meta property="og:image" content="https://arunkumarpolu.github.io/portfolio/assets/images/profile.png">
+
+
+    <!-- ==========================================
+         TWITTER
+    =========================================== -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="SEO Automation Case Study | Arun Kumar P">
+
+    <meta name="twitter:description"
+        content="SEO automation workflows using Python, Google Sheets and Google Apps Script for scalable SEO operations.">
+
+    <meta name="twitter:image" content="https://arunkumarpolu.github.io/portfolio/assets/images/profile.png">
+
+
+    <!-- ==========================================
+         FAVICON
+    =========================================== -->
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico.png">
+
+
+    <!-- ==========================================
+         MAIN PORTFOLIO CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <!-- ==========================================
+         PAGE-SPECIFIC CSS
+    =========================================== -->
+
+    <style>
+        /* ==========================================
+           PAGE CONTAINER
+        ========================================== */
+
+        .automation-page {
+            padding-top: 90px;
+        }
+
+        .automation-container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+
+        /* ==========================================
+           BREADCRUMB
+        ========================================== */
+
+        .automation-breadcrumb {
+            padding: 28px 0 10px;
+            font-size: 14px;
+        }
+
+        .automation-breadcrumb a {
+            text-decoration: none;
+        }
+
+        .automation-breadcrumb span {
+            margin: 0 7px;
+            opacity: .65;
+        }
+
+
+        /* ==========================================
+           HERO
+        ========================================== */
+
+        .automation-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 65px 0 90px;
+        }
+
+        .automation-hero-content {
+            max-width: 900px;
+        }
+
+        .automation-label {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border: 1px solid rgba(128, 128, 128, .3);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .automation-hero h1 {
+            font-size: clamp(40px, 7vw, 72px);
+            line-height: 1.08;
+            margin-bottom: 25px;
+        }
+
+        .automation-hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 780px;
+            margin-bottom: 30px;
+        }
+
+        .automation-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .automation-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s ease;
+            border: 1px solid rgba(128, 128, 128, .35);
+        }
+
+        .automation-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .automation-btn-primary {
+            background: var(--primary-color, #6c63ff);
+            color: #fff;
+            border-color: transparent;
+        }
+
+
+        /* ==========================================
+           PROJECT SUMMARY
+        ========================================== */
+
+        .automation-summary {
+            padding: 30px 0 90px;
+        }
+
+        .automation-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .automation-summary-card {
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+            padding: 25px;
+            transition: .3s ease;
+        }
+
+        .automation-summary-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .automation-summary-card h3 {
+            font-size: 15px;
+            margin-bottom: 10px;
+            opacity: .7;
+        }
+
+        .automation-summary-card p {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+
+        /* ==========================================
+           SECTIONS
+        ========================================== */
+
+        .automation-section {
+            padding: 90px 0;
+        }
+
+        .automation-section-header {
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+
+        .automation-section-tag {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .automation-section h2 {
+            font-size: clamp(30px, 5vw, 46px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .automation-section-header p,
+        .automation-content p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           CARDS
+        ========================================== */
+
+        .automation-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .automation-card {
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+            padding: 28px;
+            transition: .3s ease;
+        }
+
+        .automation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .automation-card-icon {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .automation-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .automation-card p {
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           WORKFLOW
+        ========================================== */
+
+        .automation-workflow {
+            display: grid;
+            gap: 22px;
+        }
+
+        .workflow-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 25px;
+            padding: 30px;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+        }
+
+        .workflow-number {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            font-weight: 700;
+            border: 1px solid rgba(128, 128, 128, .3);
+        }
+
+        .workflow-step h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .workflow-step p {
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           AUTOMATION FLOW
+        ========================================== */
+
+        .flow-wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            align-items: center;
+        }
+
+        .flow-box {
+            padding: 22px 15px;
+            border: 1px solid rgba(128, 128, 128, .3);
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            font-size: 22px;
+        }
+
+
+        /* ==========================================
+           CHECKLIST
+        ========================================== */
+
+        .automation-checklist {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .automation-check-item {
+            display: flex;
+            gap: 14px;
+            padding: 18px 20px;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 12px;
+        }
+
+        .automation-check-icon {
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+
+        /* ==========================================
+           CODE / TECHNICAL BLOCK
+        ========================================== */
+
+        .technical-block {
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .technical-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(128, 128, 128, .2);
+            font-weight: 700;
+        }
+
+        .technical-content {
+            padding: 25px;
+        }
+
+        .technical-content code {
+            font-family: monospace;
+            line-height: 1.8;
+            word-break: break-word;
+        }
+
+
+        /* ==========================================
+           TOOLS
+        ========================================== */
+
+        .automation-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .automation-tool {
+            padding: 12px 18px;
+            border: 1px solid rgba(128, 128, 128, .3);
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+
+        /* ==========================================
+           BEFORE / AFTER
+        ========================================== */
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .before-after-card {
+            padding: 30px;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 16px;
+        }
+
+        .before-after-card h3 {
+            margin-bottom: 18px;
+            font-size: 22px;
+        }
+
+        .before-after-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .before-after-card li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+
+        /* ==========================================
+           DELIVERABLES
+        ========================================== */
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .deliverable-card {
+            text-align: center;
+            padding: 35px 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(128, 128, 128, .25);
+        }
+
+        .deliverable-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .deliverable-card p {
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           RECOMMENDATIONS
+        ========================================== */
+
+        .automation-recommendations {
+            display: grid;
+            gap: 18px;
+        }
+
+        .automation-recommendation {
+            padding: 24px;
+            border-left: 4px solid var(--primary-color, #6c63ff);
+            border-radius: 10px;
+            border-top: 1px solid rgba(128, 128, 128, .2);
+            border-right: 1px solid rgba(128, 128, 128, .2);
+            border-bottom: 1px solid rgba(128, 128, 128, .2);
+        }
+
+        .automation-recommendation h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .automation-recommendation p {
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+           CTA
+        ========================================== */
+
+        .automation-cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .automation-cta-box {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid rgba(128, 128, 128, .25);
+            border-radius: 24px;
+            padding: 60px 35px;
+        }
+
+        .automation-cta-box h2 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 20px;
+        }
+
+        .automation-cta-box p {
+            max-width: 680px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+
+        .automation-footer {
+            border-top: 1px solid rgba(128, 128, 128, .2);
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        .automation-footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .automation-footer-links a {
+            text-decoration: none;
+        }
+
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 1000px) {
+
+            .flow-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+
+            .automation-summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .automation-grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .deliverables-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .automation-page {
+                padding-top: 65px;
+            }
+
+            .automation-hero {
+                min-height: auto;
+                padding: 50px 0 70px;
+            }
+
+            .automation-section {
+                padding: 65px 0;
+            }
+
+            .automation-summary-grid,
+            .automation-grid-3,
+            .automation-checklist,
+            .before-after-grid,
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-step {
+                grid-template-columns: 1fr;
+            }
+
+            .automation-cta-box {
+                padding: 45px 22px;
+            }
+
+        }
+    </style>
+
+
+    <!-- ==========================================
+         BREADCRUMB SCHEMA
+    =========================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://arunkumarpolu.github.io/portfolio/"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Case Studies",
+                "item": "https://arunkumarpolu.github.io/portfolio/#case-studies"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "SEO Automation Case Study",
+                "item": "https://arunkumarpolu.github.io/portfolio/services/case-study-seo-automation.html"
+            }
+
+        ]
+    }
+
+    </script>
+
+
+    <!-- ==========================================
+         WEBPAGE SCHEMA
+    =========================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+
+        "name": "SEO Automation Case Study",
+
+        "url": "https://arunkumarpolu.github.io/portfolio/services/case-study-seo-automation.html",
+
+        "description": "SEO Automation case study covering Python, Google Sheets, Google Apps Script, metadata extraction, URL auditing, schema generation and scalable SEO workflows.",
+
+        "author": {
+            "@type": "Person",
+            "name": "Arun Kumar P",
+            "url": "https://arunkumarpolu.github.io/portfolio/"
+        }
+    }
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         MAIN PAGE
+    =========================================== -->
+
+    <main class="automation-page">
+
+
+        <!-- ==========================================
+             BREADCRUMB
+        =========================================== -->
+
+        <div class="automation-container">
+
+            <nav class="automation-breadcrumb" aria-label="Breadcrumb">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <span>›</span>
+
+                <a href="../index.html#case-studies">
+                    Case Studies
+                </a>
+
+                <span>›</span>
+
+                <span>
+                    SEO Automation
+                </span>
+
+            </nav>
+
+        </div>
+
+
+        <!-- ==========================================
+             HERO
+        ========================================== -->
+
+        <section class="automation-hero">
+
+            <div class="automation-container">
+
+                <div class="automation-hero-content">
+
+                    <span class="automation-label">
+                        SEO Automation Case Study
+                    </span>
+
+
+                    <h1>
+                        SEO Automation for
+                        Scalable SEO Operations
+                    </h1>
+
+
+                    <p>
+                        A practical SEO automation workflow designed to
+                        reduce repetitive manual SEO tasks using Python,
+                        Google Sheets, Google Apps Script and structured
+                        data processing.
+                    </p>
+
+
+                    <div class="automation-buttons">
+
+                        <a href="#workflow" class="automation-btn automation-btn-primary">
+
+                            View Automation Workflow
+
+                        </a>
+
+
+                        <a href="../index.html#contact" class="automation-btn">
+
+                            Contact Me
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROJECT SUMMARY
+        ========================================== -->
+
+        <section class="automation-summary">
+
+            <div class="automation-container">
+
+                <div class="automation-summary-grid">
+
+
+                    <div class="automation-summary-card">
+
+                        <h3>
+                            Project Type
+                        </h3>
+
+                        <p>
+                            SEO Automation
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-summary-card">
+
+                        <h3>
+                            Primary Focus
+                        </h3>
+
+                        <p>
+                            SEO Data Processing
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-summary-card">
+
+                        <h3>
+                            Technologies
+                        </h3>
+
+                        <p>
+                            Python + Apps Script
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-summary-card">
+
+                        <h3>
+                            Role
+                        </h3>
+
+                        <p>
+                            SEO Specialist
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROJECT OVERVIEW
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Project Overview
+                    </span>
+
+
+                    <h2>
+                        Why SEO Automation Was Required
+                    </h2>
+
+
+                    <p>
+                        Large-scale SEO websites can contain thousands of
+                        URLs and many repetitive optimization tasks.
+                        Performing every validation manually can consume
+                        significant time and can introduce inconsistencies.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-content">
+
+                    <p>
+                        The objective of the automation workflow was to
+                        standardize repetitive SEO checks and create a
+                        structured process for collecting, validating and
+                        organizing SEO data.
+                    </p>
+
+
+                    <br>
+
+
+                    <p>
+                        Instead of manually opening individual URLs,
+                        extracting page elements and recording findings,
+                        automation can collect important SEO information
+                        and place the results into a centralized
+                        spreadsheet for analysis and action.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CHALLENGES
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Challenges
+                    </span>
+
+
+                    <h2>
+                        SEO Tasks Suitable for Automation
+                    </h2>
+
+
+                    <p>
+                        The workflow focused on repetitive and
+                        rule-based SEO tasks where automation could
+                        improve consistency and reduce manual effort.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-grid-3">
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            🔗
+                        </div>
+
+                        <h3>
+                            URL Processing
+                        </h3>
+
+                        <p>
+                            Process large lists of URLs and organize them
+                            into structured datasets for SEO analysis.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Metadata Extraction
+                        </h3>
+
+                        <p>
+                            Extract page titles, meta descriptions and
+                            heading information from website pages.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            🔍
+                        </div>
+
+                        <h3>
+                            SEO Auditing
+                        </h3>
+
+                        <p>
+                            Apply predefined SEO rules to identify
+                            missing, duplicate or potentially problematic
+                            page elements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            🧩
+                        </div>
+
+                        <h3>
+                            Schema Generation
+                        </h3>
+
+                        <p>
+                            Generate structured data templates such as
+                            FAQ and Breadcrumb schema based on
+                            predefined page information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            Data Organization
+                        </h3>
+
+                        <p>
+                            Store SEO audit outputs in Google Sheets or
+                            Excel for review and implementation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Repetitive SEO Workflows
+                        </h3>
+
+                        <p>
+                            Convert repetitive SEO processes into
+                            repeatable workflows that can be executed
+                            consistently.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUTOMATION FLOW
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Automation Architecture
+                    </span>
+
+
+                    <h2>
+                        From URLs to Actionable SEO Data
+                    </h2>
+
+
+                    <p>
+                        The basic workflow transforms raw URLs into
+                        structured SEO information that can be reviewed
+                        and acted upon.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-wrapper">
+
+
+                    <div class="flow-box">
+                        URL Input
+                    </div>
+
+
+                    <div class="flow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        URL Processing
+                    </div>
+
+
+                    <div class="flow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        SEO Extraction
+                    </div>
+
+
+                </div>
+
+
+                <br>
+
+
+                <div class="flow-wrapper">
+
+
+                    <div class="flow-box">
+                        Validation
+                    </div>
+
+
+                    <div class="flow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Google Sheets
+                    </div>
+
+
+                    <div class="flow-arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        SEO Action
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WORKFLOW
+        ========================================== -->
+
+        <section class="automation-section" id="workflow">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Workflow
+                    </span>
+
+
+                    <h2>
+                        SEO Automation Workflow
+                    </h2>
+
+
+                    <p>
+                        The workflow can be divided into individual
+                        stages so that each stage can be tested,
+                        validated and improved independently.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-workflow">
+
+
+                    <!-- STEP 1 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            01
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Collect SEO URLs
+                            </h3>
+
+                            <p>
+                                Start with URLs collected from website
+                                exports, XML sitemaps, Google Search
+                                Console, spreadsheets or other SEO
+                                sources.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            02
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Validate URLs
+                            </h3>
+
+                            <p>
+                                Process the URL list and identify
+                                invalid, duplicate or incorrectly
+                                formatted URLs before beginning the
+                                SEO extraction process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            03
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Fetch Page Information
+                            </h3>
+
+                            <p>
+                                Retrieve relevant page information such
+                                as page titles, meta descriptions,
+                                headings, status codes and other
+                                available HTML elements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 4 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            04
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Apply SEO Rules
+                            </h3>
+
+                            <p>
+                                Compare extracted information against
+                                predefined SEO rules to identify
+                                missing, duplicate or potentially
+                                problematic elements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 5 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            05
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Generate SEO Outputs
+                            </h3>
+
+                            <p>
+                                Generate structured outputs such as
+                                SEO audit results, FAQ schema,
+                                Breadcrumb schema or optimization
+                                recommendations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 6 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            06
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Store Results
+                            </h3>
+
+                            <p>
+                                Write the processed information into
+                                Google Sheets or Excel so the SEO team
+                                can review and prioritize actions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 7 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            07
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Review & Implement
+                            </h3>
+
+                            <p>
+                                Validate the automated results and
+                                convert identified issues into
+                                actionable SEO and development tasks.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUTOMATION EXAMPLES
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Automation Examples
+                    </span>
+
+
+                    <h2>
+                        SEO Processes That Can Be Automated
+                    </h2>
+
+
+                    <p>
+                        The following examples represent practical
+                        SEO workflows that can be standardized using
+                        scripts and spreadsheet automation.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-grid-3">
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            🏷️
+                        </div>
+
+                        <h3>
+                            H1 Extraction
+                        </h3>
+
+                        <p>
+                            Automatically extract H1 elements from
+                            website URLs and place the results into
+                            a structured spreadsheet.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            📄
+                        </div>
+
+                        <h3>
+                            Meta Extraction
+                        </h3>
+
+                        <p>
+                            Extract page title and meta description
+                            information for large URL lists.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            🧭
+                        </div>
+
+                        <h3>
+                            Breadcrumb Schema
+                        </h3>
+
+                        <p>
+                            Generate BreadcrumbList schema using
+                            page hierarchy and URL information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            ❓
+                        </div>
+
+                        <h3>
+                            FAQ Schema
+                        </h3>
+
+                        <p>
+                            Generate FAQPage structured data from
+                            approved questions and answers.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            URL Auditing
+                        </h3>
+
+                        <p>
+                            Process URL lists to identify status,
+                            metadata and structural SEO issues.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <div class="automation-card-icon">
+                            📈
+                        </div>
+
+                        <h3>
+                            SEO Reporting
+                        </h3>
+
+                        <p>
+                            Organize collected SEO information into
+                            spreadsheet-based reports for analysis.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GOOGLE SHEETS AUTOMATION
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Google Sheets Automation
+                    </span>
+
+
+                    <h2>
+                        Turning Google Sheets Into an SEO Control Center
+                    </h2>
+
+
+                    <p>
+                        Google Sheets can act as a central workspace for
+                        SEO data collection, validation, content
+                        planning and automation.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-checklist">
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            URL inventory management
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            H1 extraction
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Meta description extraction
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Keyword mapping
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            FAQ question management
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            FAQ schema generation
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Breadcrumb schema generation
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            SEO audit status tracking
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PYTHON AUTOMATION
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Python Automation
+                    </span>
+
+
+                    <h2>
+                        Python for Large-Scale SEO Processing
+                    </h2>
+
+
+                    <p>
+                        Python can be used to process URL lists, extract
+                        page information, transform SEO datasets and
+                        automate repetitive validation workflows.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-grid-3">
+
+
+                    <div class="automation-card">
+
+                        <h3>
+                            URL Processing
+                        </h3>
+
+                        <p>
+                            Read and process large URL datasets from
+                            CSV or Excel files.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <h3>
+                            HTML Extraction
+                        </h3>
+
+                        <p>
+                            Extract relevant page elements for SEO
+                            analysis and validation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <h3>
+                            Data Transformation
+                        </h3>
+
+                        <p>
+                            Clean, transform and organize SEO data
+                            into useful reporting formats.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <h3>
+                            Duplicate Detection
+                        </h3>
+
+                        <p>
+                            Compare URLs, metadata and content-related
+                            datasets to identify potential duplication.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <h3>
+                            Automated Validation
+                        </h3>
+
+                        <p>
+                            Apply predefined rules to identify SEO
+                            issues consistently across datasets.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-card">
+
+                        <h3>
+                            Reporting
+                        </h3>
+
+                        <p>
+                            Export processed information into
+                            structured Excel or CSV reports.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SAMPLE LOGIC
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Automation Logic
+                    </span>
+
+
+                    <h2>
+                        Example SEO Validation Logic
+                    </h2>
+
+
+                    <p>
+                        Automated SEO workflows can use simple validation
+                        rules to flag pages that require manual review.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-block">
+
+                    <div class="technical-header">
+                        Example SEO Validation
+                    </div>
+
+
+                    <div class="technical-content">
+
+                        <pre><code>IF URL is valid
+    Fetch page
+    Extract title
+    Extract meta description
+    Extract H1
+    Check HTTP status
+
+    IF title is missing
+        Flag "Missing Title"
+
+    IF meta description is missing
+        Flag "Missing Meta Description"
+
+    IF H1 is missing
+        Flag "Missing H1"
+
+    IF status is not 200
+        Flag "HTTP Issue"
+
+    Write results to Google Sheet
+
+END</code></pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BEFORE / AFTER
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Workflow Improvement
+                    </span>
+
+
+                    <h2>
+                        Manual SEO Process vs Automated Workflow
+                    </h2>
+
+                </div>
+
+
+                <div class="before-after-grid">
+
+
+                    <!-- BEFORE -->
+
+                    <div class="before-after-card">
+
+                        <h3>
+                            Before Automation
+                        </h3>
+
+
+                        <ul>
+
+                            <li>
+                                Open URLs individually
+                            </li>
+
+                            <li>
+                                Manually check page elements
+                            </li>
+
+                            <li>
+                                Copy SEO data into spreadsheets
+                            </li>
+
+                            <li>
+                                Manually identify missing elements
+                            </li>
+
+                            <li>
+                                Create schema manually
+                            </li>
+
+                            <li>
+                                Repeat the same checks for large URL lists
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- AFTER -->
+
+                    <div class="before-after-card">
+
+                        <h3>
+                            Automated Workflow
+                        </h3>
+
+
+                        <ul>
+
+                            <li>
+                                Import URL list
+                            </li>
+
+                            <li>
+                                Process URLs automatically
+                            </li>
+
+                            <li>
+                                Extract SEO elements programmatically
+                            </li>
+
+                            <li>
+                                Apply predefined validation rules
+                            </li>
+
+                            <li>
+                                Generate structured SEO outputs
+                            </li>
+
+                            <li>
+                                Review centralized results
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SEO AUTOMATION CHECKLIST
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Automation Checklist
+                    </span>
+
+
+                    <h2>
+                        SEO Automation Quality Checks
+                    </h2>
+
+                </div>
+
+
+                <div class="automation-checklist">
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Validate URL format before processing
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Handle failed URL requests
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Validate extracted HTML
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Avoid duplicate records
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Keep source URLs traceable
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Maintain consistent output structure
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Validate generated schema
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Manually review critical outputs
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TOOLS
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Technology Stack
+                    </span>
+
+
+                    <h2>
+                        Tools & Technologies
+                    </h2>
+
+
+                    <p>
+                        The automation workflow combines SEO tools,
+                        spreadsheets and scripting technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="automation-tools">
+
+
+                    <span class="automation-tool">
+                        Python
+                    </span>
+
+
+                    <span class="automation-tool">
+                        Selenium
+                    </span>
+
+
+                    <span class="automation-tool">
+                        Google Apps Script
+                    </span>
+
+
+                    <span class="automation-tool">
+                        Google Sheets
+                    </span>
+
+
+                    <span class="automation-tool">
+                        Microsoft Excel
+                    </span>
+
+
+                    <span class="automation-tool">
+                        Google Search Console
+                    </span>
+
+
+                    <span class="automation-tool">
+                        Screaming Frog
+                    </span>
+
+
+                    <span class="automation-tool">
+                        PageSpeed Insights
+                    </span>
+
+
+                    <span class="automation-tool">
+                        HTML
+                    </span>
+
+
+                    <span class="automation-tool">
+                        JavaScript
+                    </span>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DELIVERABLES
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Deliverables
+                    </span>
+
+
+                    <h2>
+                        Automation Deliverables
+                    </h2>
+
+
+                    <p>
+                        The primary objective was to create repeatable
+                        SEO workflows that produce structured,
+                        reviewable outputs.
+                    </p>
+
+                </div>
+
+
+                <div class="deliverables-grid">
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            SEO Audit Data
+                        </h3>
+
+                        <p>
+                            Structured datasets containing URL-level
+                            SEO information and validation results.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            Metadata Reports
+                        </h3>
+
+                        <p>
+                            Extracted titles, meta descriptions and
+                            headings organized for optimization.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            Schema Outputs
+                        </h3>
+
+                        <p>
+                            Structured FAQ and Breadcrumb schema
+                            generated from approved data.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            Spreadsheet Workflows
+                        </h3>
+
+                        <p>
+                            Centralized Google Sheets workflows for
+                            SEO analysis and tracking.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            URL Processing
+                        </h3>
+
+                        <p>
+                            Repeatable workflows for processing
+                            large URL lists.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            SEO Recommendations
+                        </h3>
+
+                        <p>
+                            Automated findings converted into
+                            actionable optimization tasks.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RECOMMENDATIONS
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Best Practices
+                    </span>
+
+
+                    <h2>
+                        SEO Automation Best Practices
+                    </h2>
+
+                </div>
+
+
+                <div class="automation-recommendations">
+
+
+                    <div class="automation-recommendation">
+
+                        <h3>
+                            Automate Repetitive Tasks
+                        </h3>
+
+                        <p>
+                            Focus automation on repetitive,
+                            rule-based tasks so SEO specialists can
+                            spend more time on analysis and strategy.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-recommendation">
+
+                        <h3>
+                            Keep Human Validation
+                        </h3>
+
+                        <p>
+                            Automated outputs should be reviewed before
+                            making critical SEO changes, particularly
+                            redirects, canonical changes and content
+                            decisions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-recommendation">
+
+                        <h3>
+                            Build Reusable Workflows
+                        </h3>
+
+                        <p>
+                            Create modular scripts and spreadsheet
+                            processes that can be reused across
+                            different SEO projects.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-recommendation">
+
+                        <h3>
+                            Maintain Data Quality
+                        </h3>
+
+                        <p>
+                            Validate input URLs, handle errors and
+                            maintain clear output columns so automated
+                            results remain reliable.
+                        </p>
+
+                    </div>
+
+
+                    <div class="automation-recommendation">
+
+                        <h3>
+                            Document Automation Rules
+                        </h3>
+
+                        <p>
+                            Document the logic behind automated checks
+                            so other SEO and development team members
+                            can understand and maintain the workflow.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OUTCOME
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Outcome
+                    </span>
+
+
+                    <h2>
+                        What the Automation Approach Demonstrates
+                    </h2>
+
+                    <p>
+                        The project demonstrates how SEO knowledge can
+                        be combined with scripting and spreadsheet
+                        automation to create scalable workflows.
+                    </p>
+
+                </div>
+
+
+                <div class="deliverables-grid">
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            Scalable SEO Operations
+                        </h3>
+
+                        <p>
+                            SEO checks can be structured to work across
+                            large URL datasets rather than relying only
+                            on manual page-by-page analysis.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            Consistent Validation
+                        </h3>
+
+                        <p>
+                            Predefined rules help maintain consistency
+                            when checking repetitive SEO elements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-card">
+
+                        <h3>
+                            Better SEO Data
+                        </h3>
+
+                        <p>
+                            Centralized datasets make it easier to
+                            identify issues, prioritize work and
+                            communicate findings.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             KEY LEARNINGS
+        ========================================== -->
+
+        <section class="automation-section">
+
+            <div class="automation-container">
+
+                <div class="automation-section-header">
+
+                    <span class="automation-section-tag">
+                        Key Learnings
+                    </span>
+
+
+                    <h2>
+                        What This Project Demonstrates
+                    </h2>
+
+                </div>
+
+
+                <div class="automation-checklist">
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Practical SEO automation experience
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Python-based SEO data processing
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Google Sheets automation
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Google Apps Script workflows
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Automated metadata extraction
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            SEO schema generation
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Large-scale URL processing
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-check-item">
+
+                        <span class="automation-check-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            SEO workflow standardization
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CTA
+        ========================================== -->
+
+        <section class="automation-cta">
+
+            <div class="automation-container">
+
+                <div class="automation-cta-box">
+
+                    <span class="automation-section-tag">
+                        Let's Connect
+                    </span>
+
+
+                    <h2>
+                        Looking to Scale SEO Operations?
+                    </h2>
+
+
+                    <p>
+                        I work across Technical SEO, Programmatic SEO,
+                        Local SEO, SEO Automation, large-scale content
+                        optimization, structured data and SEO audits.
+                    </p>
+
+
+                    <div class="automation-buttons" style="justify-content:center;">
+
+
+                        <a href="../index.html#contact" class="automation-btn automation-btn-primary">
+
+                            Contact Me
+
+                        </a>
+
+
+                        <a href="../index.html#case-studies" class="automation-btn">
+
+                            View More Case Studies
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="automation-footer">
+
+        <div class="automation-container">
+
+            <div class="automation-footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#experience">
+                    Experience
+                </a>
+
+                <a href="../index.html#skills">
+                    Skills
+                </a>
+
+                <a href="../index.html#services">
+                    Services
+                </a>
+
+                <a href="../index.html#case-studies">
+                    Case Studies
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <p>
+                © 2026 Arun Kumar P. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         MAIN JAVASCRIPT
+    ========================================== -->
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico.png">
+
+    <title>SEO Audit Specialist | Arun Kumar P</title>
+    <meta name="description" content="Explore Arun Kumar P's SEO audit expertise covering technical SEO, crawling, indexing, on-page issues, duplicate content, redirects, internal links and GSC analysis.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arunkumarpolu.github.io/portfolio/services/seo-audit.html">
+
+    <meta property="og:title" content="SEO Audit Specialist | Arun Kumar P">
+    <meta property="og:description" content="SEO audit expertise covering technical SEO, crawling, indexing, on-page issues, duplicate content, redirects, internal links and Search Console analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arunkumarpolu.github.io/portfolio/services/seo-audit.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .subpage-hero {
+            position: relative;
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 130px 0 90px;
+        }
+
+        .subpage-hero .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .subpage-hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subpage-hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin: 22px 0;
+        }
+
+        .subpage-hero h1 span {
+            color: var(--primary);
+        }
+
+        .subpage-hero p {
+            max-width: 800px;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .subpage-section {
+            padding: 100px 0;
+        }
+
+        .process-section {
+            background: rgba(255,255,255,.02);
+        }
+
+        .section-heading {
+            max-width: 800px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 14px 0;
+        }
+
+        .section-heading p {
+            line-height: 1.8;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-size: .82rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            height: 100%;
+            padding: 32px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(18px);
+            transition: transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 45px rgba(0,0,0,.18);
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 17px;
+            margin-bottom: 22px;
+            color: #fff;
+            background: linear-gradient(135deg,var(--primary),var(--secondary));
+            font-size: 1.4rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .audit-checklist {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            gap: 18px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 23px;
+            border-radius: 19px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+        }
+
+        .check-icon {
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: #fff;
+            background: linear-gradient(135deg,var(--primary),var(--secondary));
+        }
+
+        .check-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .check-item span {
+            display: block;
+            line-height: 1.7;
+            font-size: .93rem;
+        }
+
+        .audit-priority {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 20px;
+        }
+
+        .priority-card {
+            padding: 30px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+        }
+
+        .priority-card i {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .priority-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .priority-card p {
+            margin: 0;
+            line-height: 1.75;
+        }
+
+        .process-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4,minmax(0,1fr)) !important;
+            gap: 22px !important;
+            width: 100%;
+        }
+
+        .process-card {
+            padding: 30px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            transition: transform .3s ease,border-color .3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--primary);
+        }
+
+        .process-number {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .process-card i {
+            display: block;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .report-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px;
+            border-radius: 25px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+        }
+
+        .report-list {
+            display: grid;
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            gap: 14px;
+        }
+
+        .report-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            border-radius: 14px;
+            background: rgba(255,255,255,.035);
+        }
+
+        .report-item i {
+            color: var(--primary);
+        }
+
+        .subpage-cta {
+            padding: 100px 0;
+        }
+
+        .cta-content {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 55px 35px;
+            text-align: center;
+            border-radius: 28px;
+            background: linear-gradient(135deg,rgba(99,102,241,.14),rgba(14,165,233,.10));
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-content h2 {
+            margin: 15px 0;
+        }
+
+        .cta-content p {
+            max-width: 700px;
+            margin: 0 auto 28px;
+            line-height: 1.8;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-inner p {
+            margin: 0;
+        }
+
+        .footer-inner a {
+            color: var(--primary);
+        }
+
+        #mobile-menu {
+            overflow-y: auto;
+        }
+
+        @media (max-width: 992px) {
+            .services-grid,
+            .audit-checklist {
+                grid-template-columns: repeat(2,minmax(0,1fr));
+            }
+
+            .audit-priority {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subpage-hero {
+                min-height: auto;
+                padding: 120px 0 70px;
+            }
+
+            .subpage-section,
+            .subpage-cta {
+                padding: 70px 0;
+            }
+
+            .services-grid,
+            .audit-checklist,
+            .report-list,
+            .process-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .service-card,
+            .process-card,
+            .check-item,
+            .report-box {
+                padding: 25px;
+            }
+
+            .cta-content {
+                padding: 40px 22px;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .service-card,
+            .process-card,
+            .btn {
+                transition: none !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Person",
+        "name":"Arun Kumar P",
+        "url":"https://arunkumarpolu.github.io/portfolio/",
+        "jobTitle":"SEO Specialist",
+        "sameAs":[
+            "https://www.linkedin.com/in/arun-polu-a41a87369/",
+            "https://github.com/Arunkumarpolu"
+        ],
+        "knowsAbout":[
+            "SEO Auditing",
+            "Technical SEO",
+            "Google Search Console",
+            "On-Page SEO",
+            "Crawling",
+            "Indexing",
+            "Duplicate Content"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="progress-bar" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+
+            <a href="../index.html" class="logo" aria-label="Arun Kumar P home">
+                Arun Kumar <span>P</span>
+            </a>
+
+            <nav class="navbar" aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#services" class="active">Services</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+
+                <button id="theme-toggle"
+                        type="button"
+                        aria-label="Switch to light mode"
+                        aria-pressed="false">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+
+                <a href="../index.html#contact"
+                   class="btn btn-primary header-hire-btn"
+                   aria-label="Contact Arun Kumar P">
+                    Hire Me
+                </a>
+
+                <button id="menu-btn"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+
+        <button id="close-menu"
+                type="button"
+                aria-label="Close navigation menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="menu-overlay" aria-hidden="true"></div>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="subpage-hero">
+
+            <div class="hero-bg" aria-hidden="true">
+                <div class="gradient-circle circle-1"></div>
+                <div class="gradient-circle circle-2"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="container">
+
+                <div class="subpage-hero-content">
+
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                        SEO Audit
+                    </span>
+
+                    <h1>SEO Audit <span>Specialist</span></h1>
+
+                    <p>
+                        I analyze websites across technical SEO, crawling, indexing,
+                        on-page elements, content quality, internal linking and search
+                        performance to identify issues and prioritize actionable fixes.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="../index.html#contact"
+                           class="btn btn-primary"
+                           aria-label="Contact Arun Kumar P">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            Let's Work Together
+                        </a>
+
+                        <a href="../index.html"
+                           class="btn btn-secondary"
+                           aria-label="Back to Arun Kumar P portfolio">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            Back to Portfolio
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Audit Areas -->
+        <section class="subpage-section" id="audit-areas">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Audit Areas</span>
+
+                    <h2>What I Check During an SEO Audit</h2>
+
+                    <p>
+                        A complete audit looks beyond individual page issues and
+                        evaluates how technical, content and search-performance
+                        elements work together.
+                    </p>
+
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-spider" aria-hidden="true"></i>
+                        </div>
+                        <h3>Crawling & Indexing</h3>
+                        <p>
+                            Review crawlability, index coverage, blocked resources,
+                            excluded URLs and other signals that affect search engine
+                            discovery and indexing.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+                        </div>
+                        <h3>Technical Performance</h3>
+                        <p>
+                            Review page performance, mobile experience, Core Web Vitals
+                            opportunities and technical implementation issues.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-file-circle-check" aria-hidden="true"></i>
+                        </div>
+                        <h3>On-Page SEO</h3>
+                        <p>
+                            Check titles, meta descriptions, headings, content
+                            structure, keyword targeting, images and page-level SEO
+                            elements.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-copy" aria-hidden="true"></i>
+                        </div>
+                        <h3>Duplicate Content</h3>
+                        <p>
+                            Identify duplicate or highly similar pages and review
+                            consolidation, canonicalization or redirect opportunities.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i>
+                        </div>
+                        <h3>Redirects & Canonicals</h3>
+                        <p>
+                            Review redirect chains, broken redirects, canonical tags
+                            and URL variations to identify technical SEO risks.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-link" aria-hidden="true"></i>
+                        </div>
+                        <h3>Internal Linking</h3>
+                        <p>
+                            Analyze internal-linking patterns, orphan pages, important
+                            page accessibility and contextual relationships.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Structured Data</h3>
+                        <p>
+                            Review relevant schema implementations and check whether
+                            structured data is consistent with the page content.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+                        </div>
+                        <h3>Sitemap & Robots</h3>
+                        <p>
+                            Check XML sitemap coverage and robots.txt directives for
+                            potential crawling and discovery problems.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <h3>Search Performance</h3>
+                        <p>
+                            Use Search Console and analytics signals to identify
+                            visibility changes, indexing patterns and opportunities
+                            requiring deeper investigation.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section class="subpage-section" id="audit-checklist">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Audit Checklist</span>
+
+                    <h2>SEO Issues I Look For</h2>
+
+                    <p>
+                        The exact audit scope can vary by website, but these are common
+                        areas I review when analyzing SEO health.
+                    </p>
+
+                </div>
+
+                <div class="audit-checklist">
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Robots.txt & Crawl Rules</strong>
+                            <span>Check whether important pages or resources are unintentionally restricted.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Index Coverage</strong>
+                            <span>Review indexed, excluded and problematic URL patterns.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-link-slash" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Broken Links</strong>
+                            <span>Identify broken internal links and pages returning unexpected responses.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-arrows-turn-to-dots" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Redirect Chains</strong>
+                            <span>Find unnecessary redirect paths and incorrect redirect destinations.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-clone" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Duplicate URLs</strong>
+                            <span>Identify duplicate URL variations and pages competing for similar intent.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Missing Metadata</strong>
+                            <span>Check missing, duplicated or poorly optimized titles and meta descriptions.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Orphan Pages</strong>
+                            <span>Find important pages with weak or missing internal-link connections.</span>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <div class="check-icon">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <strong>Schema Issues</strong>
+                            <span>Review relevant structured data for implementation and consistency problems.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Priorities -->
+        <section class="subpage-section" id="priorities">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Prioritization</span>
+
+                    <h2>How I Prioritize SEO Issues</h2>
+
+                    <p>
+                        An audit should produce an actionable roadmap, not just a
+                        long list of technical observations.
+                    </p>
+
+                </div>
+
+                <div class="audit-priority">
+
+                    <article class="priority-card glass">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <h3>High Impact</h3>
+                        <p>
+                            Issues that can significantly affect crawling, indexing,
+                            important pages or organic visibility.
+                        </p>
+                    </article>
+
+                    <article class="priority-card glass">
+                        <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                        <h3>Medium Impact</h3>
+                        <p>
+                            Issues that should be improved to strengthen page quality,
+                            architecture and search performance.
+                        </p>
+                    </article>
+
+                    <article class="priority-card glass">
+                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <h3>Opportunities</h3>
+                        <p>
+                            Growth opportunities such as content gaps, internal links,
+                            metadata improvements and scalable SEO enhancements.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="subpage-section process-section" id="process">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Process</span>
+
+                    <h2>My SEO Audit Process</h2>
+
+                    <p>
+                        A structured audit process designed to move from data
+                        collection to practical recommendations.
+                    </p>
+
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card glass">
+                        <span class="process-number">01</span>
+                        <i class="fa-solid fa-database" aria-hidden="true"></i>
+                        <h3>Collect Data</h3>
+                        <p>
+                            Gather crawl data, Search Console information, analytics
+                            signals and relevant website inputs.
+                        </p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">02</span>
+                        <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                        <h3>Analyze</h3>
+                        <p>
+                            Identify technical, content, indexing, architecture and
+                            on-page issues across the website.
+                        </p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">03</span>
+                        <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                        <h3>Prioritize</h3>
+                        <p>
+                            Rank issues by impact, effort and business or SEO
+                            importance to create a practical action plan.
+                        </p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">04</span>
+                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                        <h3>Validate</h3>
+                        <p>
+                            Recheck implemented fixes and monitor relevant search
+                            signals after changes are deployed.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Report -->
+        <section class="subpage-section" id="audit-report">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Deliverables</span>
+
+                    <h2>What an SEO Audit Can Produce</h2>
+
+                    <p>
+                        The output can be organized into a clear issue list and
+                        implementation roadmap for SEO, content and development teams.
+                    </p>
+
+                </div>
+
+                <div class="report-box">
+
+                    <div class="report-list">
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Technical SEO issue list</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Indexing and crawl findings</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>On-page optimization recommendations</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Duplicate content opportunities</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Redirect and canonical recommendations</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Internal linking opportunities</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Structured data observations</span>
+                        </div>
+
+                        <div class="report-item">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <span>Prioritized SEO action plan</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="subpage-cta" id="contact-cta">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <span class="section-tag">Let's Connect</span>
+
+                    <h2>Need a Clear SEO Roadmap?</h2>
+
+                    <p>
+                        Let's review your website, identify the highest-impact SEO
+                        issues and turn the findings into a practical optimization plan.
+                    </p>
+
+                    <a href="../index.html#contact"
+                       class="btn btn-primary"
+                       aria-label="Contact Arun Kumar P">
+                        Contact Me
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to top -->
+    <button id="backToTop"
+            type="button"
+            aria-label="Back to top"
+            title="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <p>&copy; 2026 Arun Kumar P. All Rights Reserved.</p>
+
+            <a href="../index.html">Back to Portfolio</a>
+
+        </div>
+
+    </footer>
+
+    <script src="../script.js" defer></script>
+
+    <!-- Menu + theme compatibility -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeBtn = document.getElementById("close-menu");
+            const overlay = document.querySelector(".menu-overlay");
+
+            function closeMobileMenu() {
+
+                if (!mobileMenu || !overlay) return;
+
+                mobileMenu.classList.remove("active");
+                overlay.classList.remove("active");
+
+                menuBtn?.setAttribute("aria-expanded","false");
+                mobileMenu.setAttribute("aria-hidden","true");
+
+                document.body.classList.remove("menu-open");
+            }
+
+            function openMobileMenu() {
+
+                if (!mobileMenu || !overlay) return;
+
+                mobileMenu.classList.add("active");
+                overlay.classList.add("active");
+
+                menuBtn?.setAttribute("aria-expanded","true");
+                mobileMenu.setAttribute("aria-hidden","false");
+
+                document.body.classList.add("menu-open");
+            }
+
+            menuBtn?.addEventListener("click",openMobileMenu);
+            closeBtn?.addEventListener("click",closeMobileMenu);
+            overlay?.addEventListener("click",closeMobileMenu);
+
+            mobileMenu?.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click",closeMobileMenu);
+            });
+
+            document.addEventListener("keydown",event => {
+
+                if(event.key === "Escape") {
+                    closeMobileMenu();
+                }
+
+            });
+
+            window.addEventListener("resize",() => {
+
+                if(window.innerWidth > 992) {
+                    closeMobileMenu();
+                }
+
+            });
+
+            const themeToggle = document.getElementById("theme-toggle");
+
+            function syncThemeState() {
+
+                if(!themeToggle) return;
+
+                const light =
+                    document.body.classList.contains("light");
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    light ? "Switch to dark mode" : "Switch to light mode"
+                );
+
+                themeToggle.setAttribute(
+                    "aria-pressed",
+                    String(light)
+                );
+            }
+
+            themeToggle?.addEventListener("click",() => {
+                window.setTimeout(syncThemeState,0);
+            });
+
+            syncThemeState();
+
+            window.addEventListener("pageshow",closeMobileMenu);
+
+        });
+    </script>
+
+</body>
+</html>

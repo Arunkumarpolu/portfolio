@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico.png">
+
+    <title>Technical SEO Specialist | Arun Kumar P</title>
+    <meta name="description" content="Explore Arun Kumar P's Technical SEO expertise, including crawling, indexing, Core Web Vitals, structured data, sitemaps, redirects and technical audits.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arunkumarpolu.github.io/portfolio/services/technical-seo.html">
+
+    <meta property="og:title" content="Technical SEO Specialist | Arun Kumar P">
+    <meta property="og:description" content="Technical SEO expertise covering crawling, indexing, Core Web Vitals, structured data, sitemaps, redirects and internal linking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arunkumarpolu.github.io/portfolio/services/technical-seo.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Page-specific styles. Keeps the main style.css unchanged. -->
+    <style>
+        .subpage-hero {
+            position: relative;
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 130px 0 90px;
+        }
+
+        .subpage-hero .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .subpage-hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subpage-hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin: 22px 0;
+        }
+
+        .subpage-hero h1 span {
+            color: var(--primary);
+        }
+
+        .subpage-hero p {
+            max-width: 760px;
+            font-size: 1.08rem;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .subpage-section {
+            padding: 100px 0;
+        }
+
+        .subpage-section:nth-of-type(even) {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 14px 0;
+        }
+
+        .section-heading p {
+            line-height: 1.8;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-size: .82rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            height: 100%;
+            padding: 32px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(18px);
+            transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 17px;
+            margin-bottom: 22px;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            font-size: 1.4rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .process-section {
+            background: rgba(255, 255, 255, .02);
+        }
+
+        .process-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            gap: 22px !important;
+            width: 100%;
+        }
+
+        .process-card {
+            padding: 30px;
+            border-radius: 22px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            transition: transform .3s ease, border-color .3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--primary);
+        }
+
+        .process-number {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .process-card i {
+            display: block;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .subpage-cta {
+            padding: 100px 0;
+        }
+
+        .cta-content {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 55px 35px;
+            text-align: center;
+            border-radius: 28px;
+            background: linear-gradient(135deg, rgba(99,102,241,.14), rgba(14,165,233,.10));
+            border: 1px solid var(--glass-border);
+        }
+
+        .cta-content h2 {
+            margin: 15px 0;
+        }
+
+        .cta-content p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            line-height: 1.8;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-inner p {
+            margin: 0;
+        }
+
+        .footer-inner a {
+            color: var(--primary);
+        }
+
+        /* Make controls accessible and consistent on this page. */
+        #theme-toggle,
+        #menu-btn,
+        #close-menu {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        #mobile-menu {
+            overflow-y: auto;
+        }
+
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subpage-hero {
+                min-height: auto;
+                padding: 120px 0 70px;
+            }
+
+            .subpage-section,
+            .subpage-cta {
+                padding: 70px 0;
+            }
+
+            .services-grid,
+            .process-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .service-card,
+            .process-card {
+                padding: 25px;
+            }
+
+            .cta-content {
+                padding: 40px 22px;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .service-card,
+            .process-card,
+            .btn {
+                transition: none !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arun Kumar P",
+        "url": "https://arunkumarpolu.github.io/portfolio/",
+        "jobTitle": "SEO Specialist",
+        "sameAs": [
+            "https://www.linkedin.com/in/arun-polu-a41a87369/",
+            "https://github.com/Arunkumarpolu"
+        ],
+        "knowsAbout": [
+            "Technical SEO",
+            "Programmatic SEO",
+            "Local SEO",
+            "SEO Automation",
+            "Google Search Console",
+            "Core Web Vitals",
+            "Structured Data"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Scroll progress -->
+    <div id="progress-bar" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+
+            <a href="../index.html" class="logo" aria-label="Arun Kumar P home">
+                Arun Kumar <span>P</span>
+            </a>
+
+            <nav class="navbar" aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#services" class="active">Services</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+
+                <a href="../index.html#contact"
+                   class="btn btn-primary header-hire-btn"
+                   aria-label="Contact Arun Kumar P">
+                    Hire Me
+                </a>
+
+                <button id="menu-btn"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile navigation -->
+    <nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+        <button id="close-menu"
+                type="button"
+                aria-label="Close navigation menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-overlay" aria-hidden="true"></div>
+
+    <!-- Hero -->
+    <main>
+        <section class="subpage-hero">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="gradient-circle circle-1"></div>
+                <div class="gradient-circle circle-2"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="container">
+                <div class="subpage-hero-content">
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                        Technical SEO
+                    </span>
+
+                    <h1>Technical SEO <span>Specialist</span></h1>
+
+                    <p>
+                        I work on technical SEO improvements that help search engines
+                        crawl, understand, index and access website content efficiently.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="../index.html#contact"
+                           class="btn btn-primary"
+                           aria-label="Contact Arun Kumar P">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            Let's Work Together
+                        </a>
+
+                        <a href="../index.html"
+                           class="btn btn-secondary"
+                           aria-label="Back to Arun Kumar P portfolio">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section class="subpage-section" id="expertise">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">Expertise</span>
+                    <h2>Technical SEO Areas I Work On</h2>
+                    <p>
+                        My technical SEO work focuses on identifying website issues,
+                        improving search engine accessibility and maintaining a
+                        technically strong website structure.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-spider" aria-hidden="true"></i></div>
+                        <h3>Crawling &amp; Indexing</h3>
+                        <p>
+                            Analyze crawlability and indexing issues using Google Search
+                            Console and SEO crawling tools. Identify pages that require
+                            indexing improvements and technical fixes.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+                        <h3>Core Web Vitals</h3>
+                        <p>
+                            Analyze page experience and performance issues using
+                            PageSpeed Insights and related performance data.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></div>
+                        <h3>XML Sitemaps</h3>
+                        <p>
+                            Review sitemap structure, URL coverage, errors and indexing
+                            signals to support efficient search discovery.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+                        <h3>Robots.txt</h3>
+                        <p>
+                            Review robots.txt directives and identify potential crawling
+                            restrictions affecting important website URLs.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+                        <h3>Structured Data</h3>
+                        <p>
+                            Work with structured data such as BreadcrumbList, FAQPage
+                            and other relevant schema implementations.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+                        <h3>Canonicalization</h3>
+                        <p>
+                            Analyze canonical tags and URL variations to help search
+                            engines understand the preferred version of a page.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i></div>
+                        <h3>Redirects</h3>
+                        <p>
+                            Review redirect implementation and identify redirect
+                            chains, incorrect destinations and potential SEO issues.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+                        <h3>Internal Linking</h3>
+                        <p>
+                            Analyze internal linking structures to improve navigation,
+                            contextual relevance and discovery of important pages.
+                        </p>
+                    </article>
+
+                    <article class="service-card glass">
+                        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+                        <h3>Technical SEO Audits</h3>
+                        <p>
+                            Combine crawl data, Search Console signals and on-page
+                            checks to identify issues and prioritize practical fixes.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="subpage-section process-section" id="process">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">Process</span>
+                    <h2>My Technical SEO Process</h2>
+                    <p>
+                        A simple workflow from identifying problems to validating the
+                        implemented changes.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card glass">
+                        <span class="process-number">01</span>
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <h3>Audit</h3>
+                        <p>Identify technical SEO issues across the website.</p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">02</span>
+                        <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                        <h3>Prioritize</h3>
+                        <p>Group issues based on SEO impact and implementation priority.</p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">03</span>
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h3>Implement</h3>
+                        <p>Coordinate with development and content teams for technical fixes.</p>
+                    </article>
+
+                    <article class="process-card glass">
+                        <span class="process-number">04</span>
+                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                        <h3>Validate</h3>
+                        <p>Validate implemented changes using crawling and search performance tools.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="subpage-cta" id="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2>Looking to Improve Your Website's SEO?</h2>
+                    <p>
+                        Let's discuss your website, technical SEO challenges and
+                        opportunities for organic search growth.
+                    </p>
+
+                    <a href="../index.html#contact"
+                       class="btn btn-primary"
+                       aria-label="Contact Arun Kumar P">
+                        Contact Me
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to top -->
+    <button id="backToTop"
+            type="button"
+            aria-label="Back to top"
+            title="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Arun Kumar P. All Rights Reserved.</p>
+            <a href="../index.html">Back to Portfolio</a>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+
+    <!-- Small compatibility layer for the existing script.js controls. -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeBtn = document.getElementById("close-menu");
+            const overlay = document.querySelector(".menu-overlay");
+
+            const closeMobileMenu = () => {
+                if (!mobileMenu || !overlay) return;
+                mobileMenu.classList.remove("active");
+                overlay.classList.remove("active");
+                if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+                mobileMenu.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("menu-open");
+            };
+
+            const openMobileMenu = () => {
+                if (!mobileMenu || !overlay) return;
+                mobileMenu.classList.add("active");
+                overlay.classList.add("active");
+                if (menuBtn) menuBtn.setAttribute("aria-expanded", "true");
+                mobileMenu.setAttribute("aria-hidden", "false");
+                document.body.classList.add("menu-open");
+            };
+
+            menuBtn?.addEventListener("click", openMobileMenu);
+            closeBtn?.addEventListener("click", closeMobileMenu);
+            overlay?.addEventListener("click", closeMobileMenu);
+
+            mobileMenu?.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", closeMobileMenu);
+            });
+
+            document.addEventListener("keydown", event => {
+                if (event.key === "Escape") closeMobileMenu();
+            });
+
+            // Prevent the mobile drawer from remaining open after resizing.
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 992) closeMobileMenu();
+            });
+
+            // Keep theme button accessible even if script.js changes only its icon.
+            const themeToggle = document.getElementById("theme-toggle");
+            const syncThemeState = () => {
+                if (!themeToggle) return;
+                const light = document.body.classList.contains("light");
+                themeToggle.setAttribute("aria-pressed", String(light));
+                themeToggle.setAttribute(
+                    "aria-label",
+                    light ? "Switch to dark mode" : "Switch to light mode"
+                );
+            };
+
+            themeToggle?.addEventListener("click", () => {
+                window.setTimeout(syncThemeState, 0);
+            });
+
+            syncThemeState();
+
+            // Close the mobile menu if a user navigates back/forward.
+            window.addEventListener("pageshow", closeMobileMenu);
+        });
+    </script>
+</body>
+</html>
