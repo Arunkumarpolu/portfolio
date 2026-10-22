@@ -1,5 +1,3 @@
-﻿@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap);
-
 :root {
     --primary: #3B82F6;
     --secondary: #8B5CF6;
@@ -54,6 +52,18 @@ body {
 a {
     text-decoration: none;
     color: inherit
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0
 }
 
 ul {
@@ -511,7 +521,7 @@ p {
     visibility: hidden;
     width: 320px;
     height: 100vh;
-    background: rgb(15 23 42 / .98);
+    background: var(--surface);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     transition: right .45s, visibility 0s linear .45s;
@@ -532,7 +542,7 @@ p {
     align-self: flex-end;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     font-size: 1.7rem;
     margin-bottom: 40px
@@ -569,7 +579,8 @@ p {
     padding: 14px 18px;
     border-radius: 12px;
     transition: .3s;
-    font-size: 1rem
+    font-size: 1rem;
+    color: var(--white)
 }
 
 #mobile-menu a:hover {
@@ -593,7 +604,7 @@ p {
     visibility: visible
 }
 
-@media(max-width:992px) {
+@media(max-width:1200px) {
     .navbar {
         display: none
     }
@@ -1541,7 +1552,7 @@ h3 {
     }
 }
 
-@media(max-width:992px) {
+@media(max-width:1200px) {
     .navbar {
         display: none
     }
