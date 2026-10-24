@@ -71,9 +71,11 @@
     <meta name="theme-color" content="#0f172a">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.ico.png">
-    <link rel="preload" as="image" href="assets/images/profile.jpg"
-        imagesrcset="assets/images/profile-480.jpg 480w, assets/images/profile.jpg 700w"
-        imagesizes="(max-width: 576px) 280px, 350px" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/profile-480.jpg" media="(max-width: 576px)"
+        fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/profile-480.jpg"
+        imagesrcset="assets/images/profile-480.jpg 480w, assets/images/profile.jpg 700w" imagesizes="350px"
+        media="(min-width: 577px)" fetchpriority="high">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -768,10 +770,13 @@
                 <div class="profile-card">
                     <div class="profile-image">
                         <!-- Ensure this image exists in your assets folder -->
-                        <img src="assets/images/profile.jpg"
-                            srcset="assets/images/profile-480.jpg 480w, assets/images/profile.jpg 700w"
-                            sizes="(max-width: 576px) 280px, 350px" alt="Arun Kumar P | SEO Specialist" width="700"
-                            height="824" fetchpriority="high" decoding="async">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="assets/images/profile-480.jpg">
+                            <img src="assets/images/profile.jpg"
+                                srcset="assets/images/profile-480.jpg 480w, assets/images/profile.jpg 700w"
+                                sizes="(max-width: 576px) 280px, 350px" alt="Arun Kumar P | SEO Specialist"
+                                width="700" height="824" fetchpriority="high" decoding="async">
+                        </picture>
                     </div>
 
                     <div class="experience-badge glass">
@@ -1689,7 +1694,8 @@
                 <p>
                     © 2026 Arun Kumar P • All Rights Reserved
                 </p>
-                <button type="button" id="backToTop" aria-label="Back to top" title="Back to top" aria-hidden="true">
+                <button type="button" id="backToTop" aria-label="Back to top" title="Back to top" aria-hidden="true"
+                    tabindex="-1">
                     <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
                 </button>
             </div>

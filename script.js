@@ -77,6 +77,7 @@ if (topBtn) {
 
         topBtn.classList.toggle("is-visible", isVisible);
         topBtn.setAttribute("aria-hidden", String(!isVisible));
+        topBtn.tabIndex = isVisible ? 0 : -1;
     };
 
     updateBackToTopVisibility();
@@ -525,40 +526,12 @@ if (skillBars.length && "IntersectionObserver" in window) {
 
                 if (entry.isIntersecting) {
 
-                    const bar = entry.target;
+                    const bar = entry.target.querySelector(".skill-progress");
 
-
-                    let value = "80%";
-
-
-                    if (bar.classList.contains("technical")) {
-                        value = "95%";
+                    if (bar) {
+                        bar.classList.add("is-visible");
+                        skillObserver.unobserve(entry.target);
                     }
-
-                    else if (bar.classList.contains("onpage")) {
-                        value = "95%";
-                    }
-
-                    else if (bar.classList.contains("offpage")) {
-                        value = "90%";
-                    }
-
-                    else if (bar.classList.contains("local")) {
-                        value = "94%";
-                    }
-
-                    else if (bar.classList.contains("keyword")) {
-                        value = "92%";
-                    }
-
-                    else if (bar.classList.contains("analytics")) {
-                        value = "88%";
-                    }
-
-
-                    bar.style.width = value;
-
-                    skillObserver.unobserve(bar);
 
                 }
 
@@ -570,13 +543,13 @@ if (skillBars.length && "IntersectionObserver" in window) {
 
 
     skillBars.forEach(bar => {
-
-        bar.style.width = "0";
-
-        skillObserver.observe(bar);
-
+        if (bar.parentElement) {
+            skillObserver.observe(bar.parentElement);
+        }
     });
 
+} else {
+    skillBars.forEach(bar => bar.classList.add("is-visible"));
 }
 
 

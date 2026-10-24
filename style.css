@@ -1420,34 +1420,40 @@ h3 {
 
 .skill-progress {
     height: 100%;
-    width: 0;
+    width: 100%;
     border-radius: 999px;
-    transition: width 2s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 2s ease;
     background: linear-gradient(90deg, var(--primary), var(--secondary))
 }
 
 .skill-progress.technical {
-    width: 95%
+    --skill-level: .95
 }
 
 .skill-progress.onpage {
-    width: 95%
+    --skill-level: .95
 }
 
 .skill-progress.offpage {
-    width: 90%
+    --skill-level: .9
 }
 
 .skill-progress.local {
-    width: 94%
+    --skill-level: .94
 }
 
 .skill-progress.keyword {
-    width: 92%
+    --skill-level: .92
 }
 
 .skill-progress.analytics {
-    width: 88%
+    --skill-level: .88
+}
+
+.skill-progress.is-visible {
+    transform: scaleX(var(--skill-level, .8))
 }
 
 .skills-right {
@@ -2238,7 +2244,7 @@ a:focus-visible {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(12px);
-    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    transition: opacity .25s ease, transform .25s ease;
     box-shadow: 0 10px 30px rgb(59 130 246 / .35)
 }
 
