@@ -72,28 +72,16 @@ BACK TO TOP
 const topBtn = document.getElementById("backToTop");
 
 if (topBtn) {
+    const updateBackToTopVisibility = () => {
+        const isVisible = window.scrollY > 400;
 
-    window.addEventListener("scroll", () => {
+        topBtn.classList.toggle("is-visible", isVisible);
+        topBtn.setAttribute("aria-hidden", String(!isVisible));
+    };
 
-        if (window.scrollY > 400) {
-
-            topBtn.style.opacity = "1";
-            topBtn.style.visibility = "visible";
-
-        } else {
-
-            topBtn.style.opacity = "0";
-            topBtn.style.visibility = "hidden";
-
-        }
-
-    });
-
-
-    topBtn.addEventListener("click", (e) => {
-
-        e.preventDefault();
-
+    updateBackToTopVisibility();
+    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    topBtn.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
