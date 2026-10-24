@@ -95,14 +95,9 @@
 <body>
 
 
-    <!-- Loader -->
+        <!-- Progress -->
 
-    <div id="loader"></div>
-
-
-    <!-- Progress -->
-
-    <div id="progress-bar"></div>
+    <div id="progress-bar" aria-hidden="true"></div>
 
 
     <!-- Background -->
@@ -125,157 +120,90 @@
          Header
     ============================ -->
 
-    <header id="header">
+        <header id="header">
         <div class="container">
-            <a href="../index.html" class="logo" aria-label="Arun Kumar P home">
-                Arun Kumar <span>P</span>
+            <a href="../index.html#hero" class="logo" aria-label="Arun Kumar P home">
+                <span>ArunKumar</span>
             </a>
-
-
             <nav class="navbar" aria-label="Primary navigation">
-
                 <ul class="nav-links">
-
-                    <li>
-                        <a href="../index.html#about">
-                            About
-                        </a>
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li class="nav-dropdown">
+                        <a href="../index.html#services" class="active" aria-haspopup="true">Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="nav-submenu">
+                            <li><a href="technical-seo.html">Technical SEO</a></li>
+                            <li><a href="on-page-seo.html">On-Page SEO</a></li>
+                            <li><a href="off-page-seo.html">Off-Page SEO</a></li>
+                            <li><a href="local-seo.html">Local SEO</a></li>
+                            <li><a href="programmatic-seo.html">Programmatic SEO</a></li>
+                            <li><a href="keyword-research.html">Keyword Research</a></li>
+                            <li><a href="seo-automation.html">SEO Automation</a></li>
+                            <li><a href="seo-audit.html">SEO Audit</a></li>
+                            <li><a href="seo-reporting.html">SEO Reporting</a></li>
+                        </ul>
                     </li>
-
-                    <li>
-                        <a href="../index.html#experience">
-                            Experience
-                        </a>
+                    <li class="nav-dropdown">
+                        <a href="../index.html#case-studies" aria-haspopup="true">Case Studies <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="nav-submenu">
+                            <li><a href="case-study-healthcare-seo.html">Healthcare SEO</a></li>
+                            <li><a href="case-study-seo-automation.html">SEO Automation</a></li>
+                            <li><a href="case-study-technical-seo.html">Technical SEO</a></li>
+                        </ul>
                     </li>
-
-                    <li>
-                        <a href="../index.html#skills">
-                            Skills
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#services">
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#projects">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#case-studies">
-                            Case Studies
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../index.html#contact">
-                            Contact
-                        </a>
-                    </li>
-
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
-
             </nav>
-
-
             <div class="header-actions">
-
-                <button id="theme-toggle" aria-label="Toggle Theme">
-
-                    <i class="fa-solid fa-moon"></i>
-
+                <button id="theme-toggle" type="button" aria-label="Toggle Theme" aria-pressed="false">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
                 </button>
-
-
-                <a href="../assets/resume.pdf" download class="btn btn-primary">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Resume
-
-                </a>
-
-
-                <button id="menu-btn" aria-label="Open Menu">
-
-                    <i class="fa-solid fa-bars"></i>
-
+                <a href="../assets/resume.pdf" download class="btn btn-primary" aria-label="Download Arun Kumar P resume"><i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume</a>
+                <button id="menu-btn" type="button" aria-label="Open Menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
-
             </div>
-
         </div>
-
     </header>
-
-
-    <!-- Mobile Menu -->
-
-    <nav id="mobile-menu" aria-label="Mobile navigation">
-
-        <button id="close-menu" aria-label="Close Menu">
-
-            <i class="fa-solid fa-xmark"></i>
-
-        </button>
-
+    <nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+        <button id="close-menu" type="button" aria-label="Close Menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
         <ul>
-
-            <li>
-                <a href="../index.html#about">
-                    About
-                </a>
+            <li><a href="../index.html#hero">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li class="mobile-menu-group">
+                <span>Service Pages</span>
+                <ul>
+                    <li><a href="technical-seo.html">Technical SEO</a></li>
+                    <li><a href="on-page-seo.html">On-Page SEO</a></li>
+                    <li><a href="off-page-seo.html">Off-Page SEO</a></li>
+                    <li><a href="local-seo.html">Local SEO</a></li>
+                    <li><a href="programmatic-seo.html">Programmatic SEO</a></li>
+                    <li><a href="keyword-research.html">Keyword Research</a></li>
+                    <li><a href="seo-automation.html">SEO Automation</a></li>
+                    <li><a href="seo-audit.html">SEO Audit</a></li>
+                    <li><a href="seo-reporting.html">SEO Reporting</a></li>
+                </ul>
             </li>
-
-            <li>
-                <a href="../index.html#experience">
-                    Experience
-                </a>
+            <li><a href="../index.html#case-studies">Case Studies</a></li>
+            <li class="mobile-menu-group">
+                <span>Case Study Pages</span>
+                <ul>
+                    <li><a href="case-study-healthcare-seo.html">Healthcare SEO</a></li>
+                    <li><a href="case-study-seo-automation.html">SEO Automation</a></li>
+                    <li><a href="case-study-technical-seo.html">Technical SEO</a></li>
+                </ul>
             </li>
-
-            <li>
-                <a href="../index.html#skills">
-                    Skills
-                </a>
-            </li>
-
-            <li>
-                <a href="../index.html#services">
-                    Services
-                </a>
-            </li>
-
-            <li>
-                <a href="../index.html#projects">
-                    Projects
-                </a>
-            </li>
-
-            <li>
-                <a href="../index.html#case-studies">
-                    Case Studies
-                </a>
-            </li>
-
-            <li>
-                <a href="../index.html#contact">
-                    Contact
-                </a>
-            </li>
-
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
         </ul>
-
     </nav>
-
-
-    <!-- ===========================
-         Hero
-    ============================ -->
+    <div class="menu-overlay" aria-hidden="true"></div>
 
     <main>
     <section class="hero">
@@ -715,37 +643,49 @@
 
     <!-- Footer -->
 
-    <footer class="footer">
-
+        <footer id="footer">
         <div class="container">
-
-            <div class="footer-bottom">
-
-                <p>
-                    © 2026 Arun Kumar P. All Rights Reserved.
-                </p>
-
-                <p>
-                    Keyword Research | SEO Strategy | Organic Growth
-                </p>
-
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="../index.html#hero" class="footer-logo">
+                        <span>Arun Kumar</span>
+                    </a>
+                    <p>SEO Specialist focused on Technical SEO, Programmatic SEO, Local SEO, SEO Automation, website optimization, and sustainable organic search growth.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/arun-polu-a41a87369/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Arunkumarpolu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:poluarunkumar627@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#hero">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#experience">Experience</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Get In Touch</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i><span>+91 8309282888</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>poluarunkumar627@gmail.com</span></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>Hyderabad, Telangana</span></li>
+                    </ul>
+                </div>
             </div>
-
+            <div class="footer-bottom">
+                <p>© 2026 Arun Kumar P • All Rights Reserved</p>
+                <a href="#hero" id="backToTop" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
         </div>
-
     </footer>
-
-
-    <!-- Back To Top -->
-
-    <a href="#" id="backToTop" aria-label="Back to top">
-
-        <i class="fa-solid fa-arrow-up"></i>
-
-    </a>
-
-
-    <script src="../script.js"></script>
+<script src="../script.js"></script>
 
 </body>
 

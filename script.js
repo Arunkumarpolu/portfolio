@@ -217,7 +217,7 @@ ACTIVE MENU
 ==================================================*/
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
 
 if (sections.length && navLinks.length) {
@@ -313,6 +313,13 @@ DARK MODE
 const themeToggle = document.getElementById("theme-toggle");
 const currentTheme = localStorage.getItem("theme");
 
+function updateThemeToggleState(light) {
+    themeToggle.setAttribute(
+        "aria-label",
+        light ? "Switch to dark mode" : "Switch to light mode"
+    );
+    themeToggle.setAttribute("aria-pressed", String(light));
+}
 
 if (currentTheme === "light") {
 
@@ -321,7 +328,7 @@ if (currentTheme === "light") {
     if (themeToggle) {
 
         themeToggle.innerHTML =
-            '<i class="fa-solid fa-sun"></i>';
+            '<i class="fa-solid fa-sun" aria-hidden="true"></i>';
 
     }
 
@@ -329,6 +336,7 @@ if (currentTheme === "light") {
 
 
 if (themeToggle) {
+    updateThemeToggleState(document.body.classList.contains("light"));
 
     themeToggle.addEventListener("click", () => {
 
@@ -343,8 +351,9 @@ if (themeToggle) {
         );
 
         themeToggle.innerHTML = light
-            ? '<i class="fa-solid fa-sun"></i>'
-            : '<i class="fa-solid fa-moon"></i>';
+            ? '<i class="fa-solid fa-sun" aria-hidden="true"></i>'
+            : '<i class="fa-solid fa-moon" aria-hidden="true"></i>';
+        updateThemeToggleState(light);
 
     });
 
