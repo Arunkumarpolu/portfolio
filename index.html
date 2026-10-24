@@ -71,25 +71,31 @@
     <meta name="theme-color" content="#0f172a">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.ico.png">
+    <link rel="preload" as="image" href="assets/images/profile.jpg" fetchpriority="high">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print"
+        onload="this.onload=null;this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </noscript>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- ===========================
-            Loader
-    ============================ -->
-    <div id="loader"></div>
-
     <!-- ===========================
             Scroll Progress
     ============================ -->
@@ -272,7 +278,8 @@
                 <div class="profile-card">
                     <div class="profile-image">
                         <!-- Ensure this image exists in your assets folder -->
-                        <img src="assets/images/profile.png" alt="Arun Kumar P | SEO Specialist">
+                        <img src="assets/images/profile.jpg" alt="Arun Kumar P | SEO Specialist" width="700"
+                            height="824" fetchpriority="high" decoding="async">
                     </div>
 
                     <div class="experience-badge glass">
@@ -1199,7 +1206,6 @@
     <!-- Toast Container (for JS notifications) -->
     <div id="toast-container"></div>
     <!-- JavaScript -->
-    <!-- Assuming script.js is linked in the head or here. If a separate file, ensure it's loaded. -->
     <script src="script.js"></script>
 </body>
 </html>

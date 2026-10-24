@@ -204,32 +204,6 @@ p {
     border-radius: 50px
 }
 
-#loader {
-    position: fixed;
-    inset: 0;
-    background: var(--bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999
-}
-
-#loader::after {
-    content: "";
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    border: 6px solid rgb(255 255 255 / .08);
-    border-top: 6px solid var(--primary);
-    animation: spin 1s linear infinite
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg)
-    }
-}
-
 #progress-bar {
     position: fixed;
     top: 0;
