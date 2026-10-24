@@ -71,10 +71,13 @@
     <meta name="theme-color" content="#0f172a">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.ico.png">
-    <link rel="preload" as="image" href="assets/images/profile.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/profile.jpg"
+        imagesrcset="assets/images/profile-480.jpg 480w, assets/images/profile.jpg 700w"
+        imagesizes="(max-width: 576px) 280px, 350px" fetchpriority="high">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=optional"
         rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
     <noscript>
@@ -383,6 +386,7 @@
 
         .hero-content p {
             max-width: 600px;
+            min-height: 3.4em;
             margin-bottom: 35px;
             font-size: 1.05rem;
         }
@@ -513,6 +517,10 @@
 
             .hero-content {
                 margin-inline: auto;
+            }
+
+            .hero-content p {
+                min-height: 6.8em;
             }
 
             .hero-buttons,
@@ -760,7 +768,9 @@
                 <div class="profile-card">
                     <div class="profile-image">
                         <!-- Ensure this image exists in your assets folder -->
-                        <img src="assets/images/profile.jpg" alt="Arun Kumar P | SEO Specialist" width="700"
+                        <img src="assets/images/profile.jpg"
+                            srcset="assets/images/profile-480.jpg 480w, assets/images/profile.jpg 700w"
+                            sizes="(max-width: 576px) 280px, 350px" alt="Arun Kumar P | SEO Specialist" width="700"
                             height="824" fetchpriority="high" decoding="async">
                     </div>
 

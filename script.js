@@ -26,16 +26,29 @@ SCROLL PROGRESS BAR
 const progressBar = document.getElementById("progress-bar");
 
 if (progressBar) {
+    let documentHeight = 0;
     let scrollableHeight = 0;
-
     const updateScrollableHeight = () => {
-        scrollableHeight =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
+        scrollableHeight = Math.max(0, documentHeight - window.innerHeight);
     };
 
-    window.addEventListener("load", updateScrollableHeight, { once: true });
-    window.addEventListener("resize", updateScrollableHeight, { passive: true });
+    if ("ResizeObserver" in window) {
+        const documentSizeObserver = new ResizeObserver(entries => {
+            documentHeight = entries[0].contentRect.height;
+            updateScrollableHeight();
+        });
+
+        documentSizeObserver.observe(document.body);
+        window.addEventListener("resize", updateScrollableHeight, { passive: true });
+    } else {
+        const measureDocumentHeight = () => {
+            documentHeight = document.documentElement.scrollHeight;
+            updateScrollableHeight();
+        };
+
+        window.addEventListener("load", measureDocumentHeight, { once: true });
+        window.addEventListener("resize", measureDocumentHeight, { passive: true });
+    }
 
     window.addEventListener("scroll", () => {
 
@@ -45,9 +58,9 @@ if (progressBar) {
             ? (scrollTop / scrollableHeight) * 100
             : 0;
 
-        progressBar.style.width = progress + "%";
+        progressBar.style.transform = `scaleX(${progress / 100})`;
 
-    });
+    }, { passive: true });
 
 }
 
