@@ -5,6 +5,7 @@
     --success: #22C55E;
     --warning: #F59E0B;
     --danger: #EF4444;
+    --primary-text: #60A5FA;
     --bg: #0F172A;
     --surface: #1E293B;
     --surface-2: #111827;
@@ -24,6 +25,7 @@ body.light {
     --surface: #FFFFFF;
     --surface-2: #F1F5F9;
     --white: #111827;
+    --primary-text: #1D4ED8;
     --gray: #475569;
     --gray-light: #64748B;
     --glass: rgba(255, 255, 255, .75);
@@ -137,7 +139,7 @@ p {
     padding: 10px 22px;
     border-radius: 999px;
     background: rgb(59 130 246 / .10);
-    color: var(--primary);
+    color: var(--primary-text);
     margin-bottom: 20px;
     font-weight: 600
 }
@@ -164,7 +166,7 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, #1D4ED8, #6D28D9);
     color: #fff
 }
 
@@ -323,7 +325,7 @@ p {
 }
 
 .logo span {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .logo:hover {
@@ -408,7 +410,7 @@ p {
 .nav-links .nav-submenu a:hover,
 .nav-links .nav-submenu a:focus-visible {
     background: var(--glass);
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .nav-links a {
@@ -418,11 +420,11 @@ p {
 }
 
 .nav-links a:hover {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .nav-links a.active {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .nav-links a::after {
@@ -563,7 +565,7 @@ p {
 
 #mobile-menu a:hover {
     background: rgb(255 255 255 / .05);
-    color: var(--primary);
+    color: var(--primary-text);
     transform: translateX(6px)
 }
 
@@ -692,7 +694,7 @@ p {
     background: var(--glass);
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(20px);
-    color: var(--primary);
+    color: var(--primary-text);
     font-weight: 600
 }
 
@@ -818,7 +820,7 @@ h3 {
 }
 
 .experience-badge h3 {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .seo-score {
@@ -837,7 +839,7 @@ h3 {
 
 .seo-score i {
     font-size: 28px;
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .floating-card {
@@ -1054,7 +1056,7 @@ h3 {
 
 .info-card:hover {
     transform: translateY(-8px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 15px 35px rgb(59 130 246 / .18)
 }
 
@@ -1108,13 +1110,13 @@ h3 {
 
 .stat-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 20px 45px rgb(0 0 0 / .18)
 }
 
 .stat-card h3 {
     font-size: 2.4rem;
-    color: var(--primary);
+    color: var(--primary-text);
     margin-bottom: 10px
 }
 
@@ -1203,7 +1205,7 @@ h3 {
 
 .timeline-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 20px 45px rgb(0 0 0 / .20)
 }
 
@@ -1218,7 +1220,7 @@ h3 {
 
 .timeline-date {
     background: rgb(59 130 246 / .12);
-    color: var(--primary);
+    color: var(--primary-text);
     padding: 8px 18px;
     border-radius: 999px;
     font-weight: 600;
@@ -1240,7 +1242,7 @@ h3 {
 }
 
 .timeline-card h4 {
-    color: var(--primary);
+    color: var(--primary-text);
     margin-bottom: 25px
 }
 
@@ -1305,7 +1307,7 @@ h3 {
 
 .achievement-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary)
+    border-color: var(--primary-text)
 }
 
 .achievement-card i {
@@ -1395,7 +1397,7 @@ h3 {
 
 .skill-item:hover {
     transform: translateY(-6px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 20px 40px rgb(0 0 0 / .15)
 }
 
@@ -1407,7 +1409,7 @@ h3 {
 }
 
 .skill-title span:last-child {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .skill-bar {
@@ -1475,7 +1477,7 @@ h3 {
 
 .tool-card:hover {
     transform: translateY(-8px);
-    border-color: var(--primary)
+    border-color: var(--primary-text)
 }
 
 .tool-card i {
@@ -1602,7 +1604,7 @@ h3 {
 
 .service-card:hover {
     transform: translateY(-12px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 25px 50px rgb(0 0 0 / .20)
 }
 
@@ -1639,7 +1641,7 @@ h3 {
 }
 
 .service-card:hover h3 {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .service-card p {
@@ -1652,7 +1654,7 @@ h3 {
     align-items: center;
     gap: 10px;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--primary-text);
     transition: transform .3s ease
 }
 
@@ -1747,7 +1749,7 @@ h3 {
 
 .education-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 25px 50px rgb(0 0 0 / .18)
 }
 
@@ -1777,7 +1779,7 @@ h3 {
     padding: 8px 18px;
     border-radius: 999px;
     background: rgb(59 130 246 / .12);
-    color: var(--primary);
+    color: var(--primary-text);
     font-weight: 600;
     font-size: .85rem;
     margin-bottom: 15px
@@ -1788,7 +1790,7 @@ h3 {
 }
 
 .education-content h4 {
-    color: var(--primary);
+    color: var(--primary-text);
     margin-bottom: 18px
 }
 
@@ -1851,7 +1853,7 @@ h3 {
 
 .certificate-card:hover {
     transform: translateY(-8px);
-    border-color: var(--primary)
+    border-color: var(--primary-text)
 }
 
 .certificate-card i {
@@ -1934,7 +1936,7 @@ h3 {
 
 .contact-card:hover {
     transform: translateY(-8px);
-    border-color: var(--primary);
+    border-color: var(--primary-text);
     box-shadow: 0 20px 45px rgb(0 0 0 / .18)
 }
 
@@ -2056,7 +2058,7 @@ a:focus-visible {
 
 .contact-cta .btn {
     background: #fff;
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 @media(max-width:992px) {
@@ -2146,7 +2148,7 @@ a:focus-visible {
 }
 
 .footer-logo span {
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .footer-about p {
@@ -2196,7 +2198,7 @@ a:focus-visible {
 }
 
 .footer-links a:hover {
-    color: var(--primary);
+    color: var(--primary-text);
     transform: translateX(10px)
 }
 
@@ -2209,7 +2211,7 @@ a:focus-visible {
 
 .footer-contact i {
     width: 18px;
-    color: var(--primary)
+    color: var(--primary-text)
 }
 
 .footer-bottom {

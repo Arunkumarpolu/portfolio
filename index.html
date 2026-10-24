@@ -99,6 +99,7 @@
     <style>
         :root {
             --primary: #3B82F6;
+            --primary-text: #60A5FA;
             --secondary: #8B5CF6;
             --accent: #06B6D4;
             --bg: #0F172A;
@@ -113,6 +114,7 @@
             --bg: #F8FAFC;
             --surface: #FFFFFF;
             --white: #111827;
+            --primary-text: #1D4ED8;
             --gray: #475569;
             --glass: rgba(255, 255, 255, .75);
             --glass-border: rgba(0, 0, 0, .08);
@@ -187,7 +189,7 @@
 
         .btn-primary {
             color: #fff;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #1D4ED8, #6D28D9);
         }
 
         .btn-secondary {
@@ -218,7 +220,7 @@
         }
 
         .logo {
-            color: var(--primary);
+            color: var(--primary-text);
             font-size: 1.65rem;
             font-weight: 700;
             white-space: nowrap;
@@ -240,7 +242,7 @@
         }
 
         .nav-links a.active {
-            color: var(--primary);
+            color: var(--primary-text);
         }
 
         .header-actions {
@@ -371,7 +373,7 @@
             border: 1px solid var(--glass-border);
             border-radius: 999px;
             background: var(--glass);
-            color: var(--primary);
+            color: var(--primary-text);
             font-weight: 600;
         }
 
@@ -463,7 +465,7 @@
 
         .experience-badge h3 {
             margin-bottom: 0;
-            color: var(--primary);
+            color: var(--primary-text);
             font-size: clamp(1.4rem, 2vw, 1.7rem);
             font-weight: 600;
         }
@@ -1084,6 +1086,7 @@
                         </div>
                     </div>
                 </div>
+                <h3 class="visually-hidden">SEO platforms and tools</h3>
                 <div class="skills-right">
                     <div class="tool-card glass"><i class="fa-brands fa-google"></i>
                         <h4>Search Console</h4>
@@ -1576,6 +1579,7 @@
             </div>
             <div class="contact-wrapper">
                 <div class="contact-info">
+                    <h3 class="visually-hidden">Contact details</h3>
                     <div class="contact-card glass">
                         <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                         <div><span>Phone</span>
