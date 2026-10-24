@@ -26,17 +26,23 @@ SCROLL PROGRESS BAR
 const progressBar = document.getElementById("progress-bar");
 
 if (progressBar) {
+    let scrollableHeight = 0;
+
+    const updateScrollableHeight = () => {
+        scrollableHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+    };
+
+    window.addEventListener("load", updateScrollableHeight, { once: true });
+    window.addEventListener("resize", updateScrollableHeight, { passive: true });
 
     window.addEventListener("scroll", () => {
 
         const scrollTop = document.documentElement.scrollTop;
 
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
-
-        const progress = height > 0
-            ? (scrollTop / height) * 100
+        const progress = scrollableHeight > 0
+            ? (scrollTop / scrollableHeight) * 100
             : 0;
 
         progressBar.style.width = progress + "%";
@@ -202,34 +208,45 @@ const navLinks = document.querySelectorAll(".nav-links a");
 
 
 if (sections.length && navLinks.length) {
+    let sectionOffsets = [];
 
-    window.addEventListener("scroll", () => {
+    const updateActiveLink = () => {
+        if (!sectionOffsets.length) {
+            return;
+        }
 
         let current = "";
 
-        sections.forEach(section => {
-
-            const top = section.offsetTop - 120;
-            const height = section.offsetHeight;
-
-            if (window.pageYOffset >= top) {
-                current = section.getAttribute("id");
+        for (const section of sectionOffsets) {
+            if (window.scrollY >= section.top - 120) {
+                current = section.id;
+            } else {
+                break;
             }
+        }
 
-        });
-
+        const currentHref = current ? `#${current}` : "";
 
         navLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (link.getAttribute("href") === "#" + current) {
-                link.classList.add("active");
-            }
-
+            link.classList.toggle(
+                "active",
+                link.getAttribute("href") === currentHref
+            );
         });
+    };
 
-    });
+    const updateSectionOffsets = () => {
+        sectionOffsets = Array.from(sections, section => ({
+            id: section.id,
+            top: section.getBoundingClientRect().top + window.scrollY
+        }));
+
+        updateActiveLink();
+    };
+
+    window.addEventListener("load", updateSectionOffsets, { once: true });
+    window.addEventListener("resize", updateSectionOffsets, { passive: true });
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
 
 }
 
