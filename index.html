@@ -365,6 +365,7 @@
 
         .hero-tag {
             grid-column: 1 / -1;
+            justify-self: start;
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -422,6 +423,7 @@
         }
 
         .hero-image {
+            position: relative;
             display: flex;
             justify-content: center;
         }
@@ -488,6 +490,37 @@
 
         .floating-card {
             position: absolute;
+            z-index: 3;
+            padding: 12px 16px;
+            font-size: .9rem;
+            white-space: nowrap;
+            animation: none;
+        }
+
+        .hero-image .card-1 {
+            top: 28%;
+            left: -4%;
+        }
+
+        .hero-image .card-2 {
+            top: 52%;
+            right: 0;
+        }
+
+        .hero-image .card-3 {
+            top: 47%;
+            bottom: auto;
+            left: -4%;
+        }
+
+        .hero-image .card-4 {
+            top: -18%;
+            right: 0;
+        }
+
+        .hero-image .card-5 {
+            right: 0;
+            bottom: 4%;
         }
 
         .scroll-down {
@@ -545,13 +578,17 @@
                 min-height: 6.8em;
             }
 
+            .floating-card {
+                display: none;
+            }
+
+            .experience-badge {
+                bottom: 40px;
+            }
+
             .hero-buttons,
             .hero-social {
                 justify-content: center;
-            }
-
-            .floating-card {
-                display: none;
             }
 
             .profile-card {
@@ -820,14 +857,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="floating-card card-1"><i class="fa-solid fa-magnifying-glass"></i> Technical SEO</div>
+                    <div class="floating-card card-2"><i class="fa-solid fa-location-dot"></i> Local SEO</div>
+                    <div class="floating-card card-3"><i class="fa-solid fa-arrow-trend-up"></i> Organic Growth</div>
+                    <div class="floating-card card-4"><i class="fa-solid fa-sitemap"></i> Programmatic SEO</div>
+                    <div class="floating-card card-5"><i class="fa-solid fa-code"></i> SEO Automation</div>
                 </div>
-
-                <!-- Floating Cards -->
-                <div class="floating-card card-1"><i class="fa-solid fa-magnifying-glass"></i> Technical SEO</div>
-                <div class="floating-card card-2"><i class="fa-solid fa-location-dot"></i> Local SEO</div>
-                <div class="floating-card card-3"><i class="fa-solid fa-arrow-trend-up"></i> Organic Growth</div>
-                <div class="floating-card card-4"><i class="fa-solid fa-sitemap"></i> Programmatic SEO</div>
-                <div class="floating-card card-5"><i class="fa-solid fa-code"></i> SEO Automation</div>
             </div>
 
             <!-- Scroll Down -->
