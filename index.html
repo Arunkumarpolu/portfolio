@@ -310,7 +310,7 @@
             display: grid;
             grid-template-columns: 1.1fr .9fr;
             align-items: center;
-            gap: 50px;
+            gap: 24px 50px;
         }
 
         .hero-bg {
@@ -364,6 +364,7 @@
         }
 
         .hero-tag {
+            grid-column: 1 / -1;
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -375,10 +376,14 @@
             font-weight: 600;
         }
 
-        .hero-content h1 {
-            margin: 25px 0;
-            font-size: clamp(2.8rem, 6vw, 4.5rem);
-            line-height: 1.1;
+        .hero-title {
+            grid-column: 1 / -1;
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            font-size: clamp(1.5rem, 3.4vw, 3rem);
+            line-height: 1.15;
+            white-space: nowrap;
         }
 
         .hero-content h2 {
@@ -513,9 +518,23 @@
                 padding-bottom: 120px;
             }
 
-            .hero-container {
-                grid-template-columns: 1fr;
+            #hero .hero-container {
+                grid-template-columns: minmax(0, 1fr);
                 text-align: center;
+            }
+
+            .hero-tag {
+                justify-self: center;
+            }
+
+            .hero-title {
+                white-space: normal;
+                font-size: clamp(1.5rem, 4vw, 2.4rem);
+            }
+
+            .hero-name,
+            .hero-role {
+                display: block;
             }
 
             .hero-content {
@@ -558,8 +577,8 @@
                 visibility: visible;
             }
 
-            .hero-content h1 {
-                font-size: 2.8rem;
+            .hero-title {
+                font-size: min(1.4rem, 5.7vw);
             }
 
             .menu-overlay.active {
@@ -729,14 +748,15 @@
             </div>
 
             <div class="container hero-container">
+                <span class="hero-tag">
+                    <i class="fa-solid fa-chart-line"></i> SEO Specialist
+                </span>
+                <h1 class="hero-title">
+                    <span class="hero-name">Arunkumar Polu -</span>
+                    <span class="hero-role">SEO Specialist in Hyderabad</span>
+                </h1>
                 <!-- Left Content -->
                 <div class="hero-content">
-                    <span class="hero-tag">
-                        <i class="fa-solid fa-chart-line"></i> SEO Specialist
-                    </span>
-                    <h1>
-                    I'm<span>Arunkumar Polu</span>– SEO Specialist in Hyderabad
-                    </h1>
                     <h2>I am a <span id="typing-text"></span><span class="cursor-blink">|</span></h2>
                     <p>
                         I'm Arunkumar Polu, an SEO Specialist based in Hyderabad, India,
