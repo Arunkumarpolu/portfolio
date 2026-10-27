@@ -2041,7 +2041,7 @@ a:focus-visible {
     margin-top: 80px;
     padding: 45px;
     border-radius: 30px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, #1D4ED8, #6D28D9);
     text-align: center;
     color: #fff
 }
@@ -2058,7 +2058,7 @@ a:focus-visible {
 
 .contact-cta .btn {
     background: #fff;
-    color: var(--primary-text)
+    color: #1D4ED8
 }
 
 @media(max-width:992px) {

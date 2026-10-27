@@ -350,6 +350,14 @@ if (themeToggle) {
 
 
 /*==================================================
+REDUCED MOTION PREFERENCE
+==================================================*/
+
+const reduceMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)");
+
+
+/*==================================================
 TYPING ANIMATION
 ==================================================*/
 
@@ -428,7 +436,11 @@ function typeEffect() {
 }
 
 
-typeEffect();
+if (typingElement && reduceMotion.matches && words.length) {
+    typingElement.textContent = words[0];
+} else {
+    typeEffect();
+}
 
 
 /*==================================================
@@ -458,6 +470,11 @@ if (counters.length && "IntersectionObserver" in window) {
                         return;
                     }
 
+                    if (reduceMotion.matches) {
+                        counter.textContent = `${target}+`;
+                        counterObserver.unobserve(counter);
+                        return;
+                    }
 
                     let count = 0;
 
@@ -743,12 +760,6 @@ document.addEventListener("keydown", (e) => {
 /*==================================================
 REDUCED MOTION
 ==================================================*/
-
-const reduceMotion =
-    window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    );
-
 
 if (reduceMotion.matches) {
 
