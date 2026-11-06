@@ -1727,74 +1727,132 @@ h3 {
     overflow: hidden
 }
 
-.education-grid {
+.education-accordion {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 35px;
     margin-top: 70px
 }
 
-.education-card {
+.education-item {
     position: relative;
     overflow: hidden;
-    display: flex;
-    gap: 25px;
-    padding: 35px;
-    border-radius: 25px;
+    border-radius: 28px;
+    border: 1px solid var(--glass-border);
     background: var(--glass);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    transition: transform .4s ease
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease
 }
 
-.education-card:hover {
-    transform: translateY(-10px);
+.education-item:hover {
+    transform: translateY(-6px);
     border-color: var(--primary-text);
     box-shadow: 0 25px 50px rgb(0 0 0 / .18)
 }
 
+.education-item.active {
+    border-color: rgb(255 255 255 / .12)
+}
+
+.education-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 28px 28px 18px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: left
+}
+
+.education-header-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%
+}
+
 .education-icon {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
-    border-radius: 20px;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    border-radius: 18px;
+    font-size: 26px;
     color: #fff;
-    background: linear-gradient(135deg, var(--primary), var(--secondary))
-}
-
-.education-card:hover .education-icon {
-    transform: rotate(-8deg)
-}
-
-.education-content {
-    flex: 1
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 12px 24px rgb(59 130 246 / .28)
 }
 
 .education-year {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
     padding: 8px 18px;
     border-radius: 999px;
     background: rgb(59 130 246 / .12);
     color: var(--primary-text);
     font-weight: 600;
-    font-size: .85rem;
-    margin-bottom: 15px
+    font-size: .9rem;
+    line-height: 1
+}
+
+.education-chevron {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text);
+    transition: transform .35s ease
+}
+
+.education-item.active .education-chevron {
+    transform: rotate(180deg)
+}
+
+.education-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 28px 0;
+    transition: max-height .45s ease, opacity .25s ease, padding .45s ease
+}
+
+.education-item.active .education-content {
+    max-height: 280px;
+    opacity: 1;
+    padding: 0 28px 28px
 }
 
 .education-content h3 {
-    margin-bottom: 8px
+    margin: 0 0 10px;
+    font-size: clamp(2rem, 2vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -.04em
 }
 
 .education-content h4 {
     color: var(--primary-text);
-    margin-bottom: 18px
+    margin: 0 0 14px;
+    font-size: clamp(1.4rem, 1.8vw, 2.2rem)
+}
+
+.education-school {
+    margin: 0 0 12px;
+    color: var(--primary-text);
+    font-size: 1.05rem;
+    font-weight: 600
 }
 
 .education-content p {
+    margin: 0;
     line-height: 1.8
 }
 
@@ -1875,7 +1933,7 @@ h3 {
 }
 
 @media(max-width:992px) {
-    .education-grid {
+    .education-accordion {
         grid-template-columns: 1fr
     }
 
@@ -1885,13 +1943,31 @@ h3 {
 }
 
 @media(max-width:576px) {
-    .education-card {
-        flex-direction: column;
-        text-align: center
+    .education-trigger {
+        padding: 22px 20px 16px
+    }
+
+    .education-header-row {
+        gap: 12px;
+        align-items: flex-start
     }
 
     .education-icon {
-        margin: auto
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        font-size: 22px
+    }
+
+    .education-content {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .education-item.active .education-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 22px
     }
 
     .learning-tags {

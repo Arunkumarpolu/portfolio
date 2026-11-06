@@ -296,6 +296,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /*==================================================
+EDUCATION ACCORDION
+==================================================*/
+
+const educationItems = document.querySelectorAll(".education-item");
+
+if (educationItems.length) {
+    educationItems.forEach(item => {
+        const trigger = item.querySelector(".education-trigger");
+
+        if (!trigger) {
+            return;
+        }
+
+        trigger.addEventListener("click", () => {
+            const isOpen = item.classList.contains("active");
+
+            educationItems.forEach(currentItem => {
+                const currentTrigger = currentItem.querySelector(".education-trigger");
+                const shouldOpen = currentItem === item && !isOpen;
+
+                currentItem.classList.toggle("active", shouldOpen);
+                currentTrigger?.setAttribute("aria-expanded", String(shouldOpen));
+            });
+        });
+    });
+}
+
+
+/*==================================================
 DARK MODE
 ==================================================*/
 
