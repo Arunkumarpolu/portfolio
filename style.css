@@ -2853,6 +2853,19 @@ body.light #header.scrolled {
     color: var(--primary-text)
 }
 
+.contact-card > div:last-child {
+    min-width: 0
+}
+
+.contact-card h4,
+.footer-contact li span {
+    overflow-wrap: anywhere
+}
+
+.learning-section {
+    margin-bottom: clamp(36px, 5vw, 64px)
+}
+
 .contact-cta {
     background:
         radial-gradient(ellipse at 10% 0%, rgb(0 217 245 / .3), transparent 45%),
