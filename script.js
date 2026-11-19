@@ -808,7 +808,7 @@ const contactForm =
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
 
         const name =
             document.querySelector("#name");
@@ -867,9 +867,7 @@ if (contactForm) {
         }
 
 
-        /*------------------------------------------
-        Show Sending Status
-        ------------------------------------------*/
+        e.preventDefault();
 
         const submitBtn =
             contactForm.querySelector(
@@ -878,22 +876,37 @@ if (contactForm) {
 
 
         if (submitBtn) {
-
             submitBtn.disabled = true;
-
             submitBtn.textContent =
                 "Sending...";
-
         }
 
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
 
-        /*
-        IMPORTANT:
-        Do NOT show "Message sent successfully"
-        here.
+            if (!response.ok) {
+                throw new Error(`Contact form submission failed: ${response.status}`);
+            }
 
-        Formspree handles the actual submission.
-        */
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: "contact_form_submit" });
+            contactForm.reset();
+            showToast("Message sent successfully.", "success");
+        } catch (error) {
+            console.error("Contact form submission failed.", error);
+            showToast("Unable to send your message. Please try again.", "error");
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Message";
+            }
+        }
 
     });
 

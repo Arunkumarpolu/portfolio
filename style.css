@@ -2858,7 +2858,8 @@ body.light #header.scrolled {
 }
 
 .contact-card h4,
-.footer-contact li span {
+.footer-contact li span,
+.footer-contact li a {
     overflow-wrap: anywhere
 }
 
