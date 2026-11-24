@@ -1661,6 +1661,26 @@ h3 {
     margin-bottom: 20px
 }
 
+.service-case-study-link {
+    width: min(760px, 92%);
+    margin: 32px auto;
+    padding: 20px 24px;
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-md);
+    line-height: 1.75
+}
+
+.service-case-study-link a {
+    color: var(--primary-text);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px
+}
+
 .service-faq-list {
     display: grid;
     gap: 14px;
