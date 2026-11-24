@@ -206,7 +206,27 @@ ACTIVE MENU
 ==================================================*/
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const navLinks = document.querySelectorAll('.nav-links a[href*="#"]');
+const normalizePagePath = path => path.replace(/index\.html$/, "");
+const currentPagePath = normalizePagePath(window.location.pathname);
+
+function getSamePageTarget(anchor) {
+    const targetUrl = new URL(anchor.href, window.location.href);
+
+    if (
+        targetUrl.origin !== window.location.origin ||
+        normalizePagePath(targetUrl.pathname) !== currentPagePath ||
+        !targetUrl.hash ||
+        targetUrl.hash === "#"
+    ) {
+        return null;
+    }
+
+    return {
+        hash: targetUrl.hash,
+        element: document.getElementById(decodeURIComponent(targetUrl.hash.slice(1)))
+    };
+}
 
 
 if (sections.length && navLinks.length) {
@@ -227,12 +247,12 @@ if (sections.length && navLinks.length) {
             }
         }
 
-        const currentHref = current ? `#${current}` : "";
-
         navLinks.forEach(link => {
+            const target = getSamePageTarget(link);
+
             link.classList.toggle(
                 "active",
-                link.getAttribute("href") === currentHref
+                Boolean(target && target.hash === `#${current}`)
             );
         });
     };
@@ -257,18 +277,11 @@ if (sections.length && navLinks.length) {
 SMOOTH SCROLL
 ==================================================*/
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
 
     anchor.addEventListener("click", function (e) {
-
-        const targetId = this.getAttribute("href");
-
-        // Ignore empty "#"
-        if (!targetId || targetId === "#") {
-            return;
-        }
-
-        const target = document.querySelector(targetId);
+        const samePageTarget = getSamePageTarget(this);
+        const target = samePageTarget && samePageTarget.element;
 
         if (target) {
 
@@ -278,8 +291,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: "smooth"
             });
 
-            if (window.location.hash !== targetId) {
-                window.history.pushState(null, "", targetId);
+            if (window.location.hash !== samePageTarget.hash) {
+                window.history.pushState(null, "", samePageTarget.hash);
             }
 
             if (mobileMenu && mobileMenu.classList.contains("active")) {
