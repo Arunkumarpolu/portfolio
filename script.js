@@ -490,6 +490,11 @@ COUNTER
 const counters =
     document.querySelectorAll(".counter");
 
+const formatCounterValue = (value, counter) =>
+    counter.dataset.format === "grouped"
+        ? Number(value).toLocaleString("en-US")
+        : String(value);
+
 
 if (counters.length && "IntersectionObserver" in window) {
 
@@ -511,7 +516,8 @@ if (counters.length && "IntersectionObserver" in window) {
                     }
 
                     if (reduceMotion.matches) {
-                        counter.textContent = `${target}+`;
+                        counter.textContent =
+                            `${formatCounterValue(target, counter)}+`;
                         counterObserver.unobserve(counter);
                         return;
                     }
@@ -530,14 +536,14 @@ if (counters.length && "IntersectionObserver" in window) {
                         if (count < target) {
 
                             counter.innerText =
-                                Math.ceil(count);
+                                formatCounterValue(Math.ceil(count), counter);
 
                             requestAnimationFrame(update);
 
                         } else {
 
                             counter.innerText =
-                                target + "+";
+                                `${formatCounterValue(target, counter)}+`;
 
                         }
 
@@ -561,6 +567,14 @@ if (counters.length && "IntersectionObserver" in window) {
 
         counterObserver.observe(counter);
 
+    });
+
+} else if (counters.length) {
+    counters.forEach(counter => {
+        const target = Number(counter.dataset.target);
+        if (target) {
+            counter.textContent = `${formatCounterValue(target, counter)}+`;
+        }
     });
 
 }
@@ -813,6 +827,43 @@ if (reduceMotion.matches) {
 CONTACT FORM VALIDATION & SUBMISSION
 ==================================================*/
 
+const pushPortfolioEvent = (eventName, parameters = {}) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: eventName,
+        ...parameters
+    });
+};
+
+document.addEventListener("click", event => {
+    if (!(event.target instanceof Element)) {
+        return;
+    }
+
+    const link = event.target.closest("a");
+    if (!link) {
+        return;
+    }
+
+    if (link.classList.contains("whatsapp-float")) {
+        pushPortfolioEvent("whatsapp_click");
+    } else if (link.hasAttribute("download")) {
+        pushPortfolioEvent("resume_download");
+    } else if (link.href.includes("linkedin.com/")) {
+        pushPortfolioEvent("linkedin_click");
+    } else if (link.classList.contains("case-study-link")) {
+        pushPortfolioEvent("case_study_click", {
+            case_study_url: link.getAttribute("href"),
+            case_study_label: link.textContent.trim()
+        });
+    } else if (link.closest(".hero-buttons")) {
+        pushPortfolioEvent("hero_cta_click", {
+            cta_label: link.textContent.trim(),
+            cta_destination: link.getAttribute("href")
+        });
+    }
+});
+
 const contactForm =
     document.querySelector("#contactForm");
 
@@ -905,8 +956,7 @@ if (contactForm) {
                 throw new Error(`Contact form submission failed: ${response.status}`);
             }
 
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({ event: "contact_form_submit" });
+            pushPortfolioEvent("contact_form_submit");
             contactForm.reset();
             showToast("Message sent successfully.", "success");
         } catch (error) {
