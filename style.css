@@ -1838,7 +1838,7 @@ h3 {
     background: linear-gradient(180deg, rgb(255 255 255 / .08), rgb(255 255 255 / .04))
 }
 
-@media(max-width:992px) {
+@media(max-width:1100px) {
     .skills-wrapper {
         grid-template-columns: 1fr
     }
@@ -1846,6 +1846,12 @@ h3 {
     .skills-right {
         grid-template-columns: repeat(3, 1fr);
         margin-top: 40px
+    }
+}
+
+@media(max-width:767px) {
+    .skills-right {
+        grid-template-columns: repeat(2, 1fr)
     }
 }
 
@@ -3062,7 +3068,6 @@ a:focus-visible {
 body :is(
     .about-stats,
     .experience-achievements,
-    .skills-right,
     .services-grid,
     .process-grid,
     .certification-grid,
@@ -3085,7 +3090,6 @@ body :is(
 body :is(
     .about-stats,
     .experience-achievements,
-    .skills-right,
     .services-grid,
     .process-grid,
     .certification-grid,
