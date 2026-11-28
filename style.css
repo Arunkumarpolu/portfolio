@@ -1927,7 +1927,8 @@ h3 {
     display: flex;
     align-items: center;
     gap: 18px;
-    width: 100%
+    width: 100%;
+    min-width: 0
 }
 
 .education-icon {
@@ -1958,6 +1959,15 @@ h3 {
     line-height: 1
 }
 
+.education-qualification {
+    flex: 1 1 12rem;
+    min-width: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere
+}
+
 .education-chevron {
     width: 32px;
     height: 32px;
@@ -1984,13 +1994,6 @@ h3 {
     max-height: 280px;
     opacity: 1;
     padding: 0 28px 28px
-}
-
-.education-content h3 {
-    margin: 0 0 10px;
-    font-size: clamp(2rem, 2vw, 3rem);
-    line-height: 1.2;
-    letter-spacing: -.04em
 }
 
 .education-content h4 {
@@ -3122,6 +3125,10 @@ body :is(
     .before-after-grid
 ) {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+body .education-accordion {
+    grid-template-columns: 1fr !important;
 }
 
 @media (max-width: 1279px) {
