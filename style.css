@@ -1884,7 +1884,7 @@ h3 {
 
 .education-accordion {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 35px;
     margin-top: 70px
 }
@@ -2091,10 +2091,6 @@ h3 {
 }
 
 @media(max-width:992px) {
-    .education-accordion {
-        grid-template-columns: 1fr
-    }
-
     .certification-grid {
         grid-template-columns: repeat(2, 1fr)
     }
@@ -3069,7 +3065,6 @@ body :is(
     .skills-right,
     .services-grid,
     .process-grid,
-    .education-accordion,
     .certification-grid,
     .case-studies-grid,
     .summary-grid,
@@ -3093,7 +3088,6 @@ body :is(
     .skills-right,
     .services-grid,
     .process-grid,
-    .education-accordion,
     .certification-grid,
     .case-studies-grid,
     .summary-grid,
@@ -3127,8 +3121,66 @@ body :is(
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 
-body .education-accordion {
-    grid-template-columns: 1fr !important;
+body .education-trigger {
+    gap: 8px;
+    padding: 18px 16px 14px;
+}
+
+body .education-header-row {
+    gap: 8px;
+}
+
+body .education-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+body .education-year {
+    padding: 7px 8px;
+    font-size: .72rem;
+    white-space: nowrap;
+}
+
+body .education-qualification {
+    flex: 0 0 auto;
+    font-size: .82rem;
+    white-space: nowrap;
+}
+
+body .education-chevron {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+@media (max-width: 575px) {
+    body .education-trigger {
+        gap: 6px;
+        padding: 16px 12px 12px;
+    }
+
+    body .education-header-row {
+        gap: 6px;
+    }
+
+    body .education-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 18px;
+    }
+
+    body .education-year {
+        padding: 6px;
+        font-size: .62rem;
+    }
+
+    body .education-qualification {
+        font-size: .72rem;
+    }
 }
 
 @media (max-width: 1279px) {

@@ -323,11 +323,9 @@ if (educationItems.length) {
         }
 
         trigger.addEventListener("click", () => {
-            const isOpen = item.classList.contains("active");
-
             educationItems.forEach(currentItem => {
                 const currentTrigger = currentItem.querySelector(".education-trigger");
-                const shouldOpen = currentItem === item && !isOpen;
+                const shouldOpen = currentItem === item;
 
                 currentItem.classList.toggle("active", shouldOpen);
                 currentTrigger?.setAttribute("aria-expanded", String(shouldOpen));
