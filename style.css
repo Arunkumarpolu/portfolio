@@ -3058,3 +3058,93 @@ a:focus-visible {
         background-attachment: scroll
     }
 }
+
+/* Let card grids reflow before their contents become cramped. */
+body :is(
+    .about-stats,
+    .experience-achievements,
+    .skills-right,
+    .services-grid,
+    .process-grid,
+    .education-accordion,
+    .certification-grid,
+    .case-studies-grid,
+    .summary-grid,
+    .case-grid-3,
+    .result-grid,
+    .automation-summary-grid,
+    .automation-grid-3,
+    .before-after-grid,
+    .deliverables-grid,
+    .healthcare-summary-grid,
+    .healthcare-grid-3,
+    .healthcare-outcome-grid
+) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)) !important;
+    gap: clamp(18px, 2.2vw, 32px) !important;
+}
+
+body :is(
+    .about-stats,
+    .experience-achievements,
+    .skills-right,
+    .services-grid,
+    .process-grid,
+    .education-accordion,
+    .certification-grid,
+    .case-studies-grid,
+    .summary-grid,
+    .case-grid-3,
+    .result-grid,
+    .automation-summary-grid,
+    .automation-grid-3,
+    .before-after-grid,
+    .deliverables-grid,
+    .healthcare-summary-grid,
+    .healthcare-grid-3,
+    .healthcare-outcome-grid
+) > * {
+    min-width: 0;
+}
+
+body [class*="card"] {
+    min-width: 0;
+}
+
+body [class*="card"] :is(h1, h2, h3, h4, p, a, span, strong, li) {
+    overflow-wrap: anywhere;
+}
+
+body :is(
+    .summary-grid,
+    .automation-summary-grid,
+    .healthcare-summary-grid,
+    .before-after-grid
+) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 1279px) {
+    body :is(
+        .experience-achievements,
+        .process-grid,
+        .summary-grid,
+        .automation-summary-grid,
+        .healthcare-summary-grid
+    ) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 575px) {
+    body :is(
+        .experience-achievements,
+        .process-grid,
+        .summary-grid,
+        .automation-summary-grid,
+        .healthcare-summary-grid,
+        .before-after-grid
+    ) {
+        grid-template-columns: 1fr !important;
+    }
+}
